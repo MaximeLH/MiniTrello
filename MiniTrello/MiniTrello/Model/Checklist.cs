@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniTrello
+namespace MiniTrello.Model
 {
-    class Liste
+    class Checklist
     {
         public int Id { get; set; }
-        public string Titre { get; set; }
-        public List<Carte> Cartes { get; set; }
+        public List<ElementChecklist> CheckL { get; set; }
+        
     }
 }

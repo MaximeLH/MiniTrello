@@ -47,8 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Carte.cs" />
+    <Compile Include="Model\ElementChecklist.cs" />
     <Compile Include="FormulaireCarte.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Checklist.cs" />
+    <Compile Include="View\CtrlListe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtrlListe.Designer.cs">
+      <DependentUpon>CtrlListe.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
@@ -60,14 +68,9 @@
       <DependentUpon>FrmTableau.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Liste.cs" />
-    <Compile Include="View\FormTestListe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormTestListe.Designer.cs">
-      <DependentUpon>FormTestListe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Tableau.cs" />
     <EmbeddedResource Include="FormulaireCarte.resx">
       <DependentUpon>FormulaireCarte.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FrmTableau.resx">
+      <DependentUpon>FrmTableau.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

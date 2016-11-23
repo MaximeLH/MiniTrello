@@ -10,14 +10,15 @@ namespace MiniTrello
     {
         public int Id { get; set; }
         public string Titre { get; set; }
-        public void AjouterListe()
-        {
+        public List<Liste> Listes { get; set; }
+        //public void AjouterListe()
+        //{
 
-        }
+        //}
 
-        public void SupprimerListe()
-        {
+        //public void SupprimerListe()
+        //{
 
-        }
+        //}
     }
 }
