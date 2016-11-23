@@ -10,6 +10,6 @@ namespace MiniTrello
     {
         public int Id { get; set; }
         public string Titre { get; set; }
-        //TO DO Retirer le commentaire lorsque la classe checklist sera créée public List CheckList { get; set; }
+        //todo Retirer le commentaire lorsque la classe checklist sera créée public List CheckList { get; set; }
     }
 }
