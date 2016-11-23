@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace MiniTrello
 {
-    class Liste
+    class Tableau
     {
         public int Id { get; set; }
         public string Titre { get; set; }
-        public List<Carte> Cartes { get; set; }
+        public List<Liste> Listes { get; set; }
+        public void AjouterListe()
+        {
+
+        }
+
+        public void SupprimerListe()
+        {
+
+        }
     }
 }
