@@ -50,6 +50,7 @@
     <Compile Include="FormulaireCarte.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Model\Checklist.cs" />
     <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
     </Compile>
