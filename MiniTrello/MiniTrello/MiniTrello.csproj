@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Carte.cs" />
+    <Compile Include="Model\Checklist.cs" />
     <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
     </Compile>
