@@ -1,6 +1,6 @@
 ﻿namespace MiniTrello
 {
-    partial class Form1
+    partial class FrmTableau
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FrmTableau
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(767, 493);
+            this.Name = "FrmTableau";
+            this.Text = "FrmTableau";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

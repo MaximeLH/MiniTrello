@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiniTrello
 {
-    public partial class Form1 : Form
+    public partial class FrmTableau : Form
     {
-        public Form1()
+        public FrmTableau()
         {
             InitializeComponent();
         }
