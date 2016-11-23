@@ -15,6 +15,9 @@ namespace MiniTrello
         public Titre()
         {
             InitializeComponent();
+            LblTitre.Name = "";
+            LblSousTitre.Name = "Se trouve dans: " + "";
+            
         }
 
         private void FormulaireCarte_Load(object sender, EventArgs e)
