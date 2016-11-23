@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.AddListe = new System.Windows.Forms.Button();
-            this.AddCarte = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AddCarte = new System.Windows.Forms.Button();
+            this.AddListe = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,24 +46,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(363, 203);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // AddListe
-            // 
-            this.AddListe.Location = new System.Drawing.Point(138, 3);
-            this.AddListe.Name = "AddListe";
-            this.AddListe.Size = new System.Drawing.Size(117, 23);
-            this.AddListe.TabIndex = 0;
-            this.AddListe.Text = "Ajouter une liste ...";
-            this.AddListe.UseVisualStyleBackColor = true;
-            // 
-            // AddCarte
-            // 
-            this.AddCarte.Location = new System.Drawing.Point(3, 29);
-            this.AddCarte.Name = "AddCarte";
-            this.AddCarte.Size = new System.Drawing.Size(100, 23);
-            this.AddCarte.TabIndex = 1;
-            this.AddCarte.Text = "Ajouter un carte";
-            this.AddCarte.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel2
             // 
@@ -82,11 +64,29 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
             // 
+            // AddCarte
+            // 
+            this.AddCarte.Location = new System.Drawing.Point(3, 29);
+            this.AddCarte.Name = "AddCarte";
+            this.AddCarte.Size = new System.Drawing.Size(100, 23);
+            this.AddCarte.TabIndex = 1;
+            this.AddCarte.Text = "Ajouter un carte";
+            this.AddCarte.UseVisualStyleBackColor = true;
+            // 
+            // AddListe
+            // 
+            this.AddListe.Location = new System.Drawing.Point(138, 3);
+            this.AddListe.Name = "AddListe";
+            this.AddListe.Size = new System.Drawing.Size(117, 23);
+            this.AddListe.TabIndex = 0;
+            this.AddListe.Text = "Ajouter une liste ...";
+            this.AddListe.UseVisualStyleBackColor = true;
+            // 
             // FormTestListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 399);
+            this.ClientSize = new System.Drawing.Size(543, 342);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "FormTestListe";
             this.Text = "FormTestListe";
