@@ -77,10 +77,9 @@
     <Compile Include="View\FrmTest.Designer.cs">
       <DependentUpon>FrmTest.cs</DependentUpon>
     </Compile>
-	<EmbeddedResource Include="View\FormulaireCarte.resx">
+    <EmbeddedResource Include="View\FormulaireCarte.resx">
       <DependentUpon>FormulaireCarte.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Tableau.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
