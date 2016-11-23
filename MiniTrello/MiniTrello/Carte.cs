@@ -8,7 +8,8 @@ namespace MiniTrello
 {
     class Carte
     {
-        public string Corps { get; set; }
-
+        public int Id { get; set; }
+        public string Titre { get; set; }
+        //TO DO Retirer le commentaire lorsque la classe checklist sera créée public List CheckList { get; set; }
     }
 }
