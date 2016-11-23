@@ -47,14 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Carte.cs" />
+    <Compile Include="FormulaireCarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\FrmTableau.cs">
-	    <Compile Include="FormulaireCarte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormulaireCarte.Designer.cs">
       <DependentUpon>FormulaireCarte.cs</DependentUpon>
-    </Compile>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FrmTableau.Designer.cs">
       <DependentUpon>FrmTableau.cs</DependentUpon>
