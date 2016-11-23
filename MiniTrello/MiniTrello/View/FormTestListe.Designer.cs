@@ -70,7 +70,7 @@
             this.AddCarte.Name = "AddCarte";
             this.AddCarte.Size = new System.Drawing.Size(100, 23);
             this.AddCarte.TabIndex = 1;
-            this.AddCarte.Text = "Ajouter un carte";
+            this.AddCarte.Text = "Ajouter une carte";
             this.AddCarte.UseVisualStyleBackColor = true;
             // 
             // AddListe
