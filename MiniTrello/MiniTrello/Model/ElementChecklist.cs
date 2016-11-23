@@ -11,5 +11,6 @@ namespace MiniTrello.Model
         public int ID { get; set; }
         public string TextElt { get; set; }
         public bool Etat { get; set; }
+
     }
 }
