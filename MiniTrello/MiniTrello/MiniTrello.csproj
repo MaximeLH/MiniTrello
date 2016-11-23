@@ -73,6 +73,9 @@
       <DependentUpon>FormTestListe.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Tableau.cs" />
+    <EmbeddedResource Include="FrmTableau.resx">
+      <DependentUpon>FrmTableau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
