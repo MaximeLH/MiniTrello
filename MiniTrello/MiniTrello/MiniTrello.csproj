@@ -72,7 +72,7 @@
     <EmbeddedResource Include="View\FormTestListe.resx">
       <DependentUpon>FormTestListe.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="Tableau.cs" />
+    <Compile Include="Model\Tableau.cs" />
     <EmbeddedResource Include="FrmTableau.resx">
       <DependentUpon>FrmTableau.cs</DependentUpon>
     </EmbeddedResource>
