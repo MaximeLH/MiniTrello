@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Carte.cs" />
+    <Compile Include="FormulaireCarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulaireCarte.Designer.cs">
+      <DependentUpon>FormulaireCarte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTableau.cs">
       <SubType>Form</SubType>
     </Compile>
