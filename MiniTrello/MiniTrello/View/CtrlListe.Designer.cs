@@ -119,11 +119,11 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.TextBox txtTitre;
         private System.Windows.Forms.Button btnAddCarte;
         private System.Windows.Forms.TextBox txtCarte;
         private System.Windows.Forms.Button btnSupp;
         private System.Windows.Forms.Button btnAddCom;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        internal System.Windows.Forms.TextBox txtTitre;
     }
 }

@@ -80,6 +80,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CtrlListe.resx">
+      <DependentUpon>CtrlListe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FrmTableau.resx">
       <DependentUpon>FrmTableau.cs</DependentUpon>
     </EmbeddedResource>
