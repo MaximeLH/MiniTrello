@@ -11,14 +11,14 @@ namespace MiniTrello
         public int Id { get; set; }
         public string Titre { get; set; }
         public List<Liste> Listes { get; set; }
-        public void AjouterListe()
-        {
+        //public void AjouterListe()
+        //{
 
-        }
+        //}
 
-        public void SupprimerListe()
-        {
+        //public void SupprimerListe()
+        //{
 
-        }
+        //}
     }
 }
