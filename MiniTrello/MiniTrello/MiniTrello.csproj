@@ -66,6 +66,7 @@
     <EmbeddedResource Include="View\FormTestListe.resx">
       <DependentUpon>FormTestListe.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="Tableau.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
