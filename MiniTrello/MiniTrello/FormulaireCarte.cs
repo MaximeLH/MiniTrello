@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace MiniTrello
 {
-    public partial class FrmTableau : Form
+    public partial class FormulaireCarte : Form
     {
-        public FrmTableau()
+        public FormulaireCarte()
         {
             InitializeComponent();
         }
-
-
     }
 }
