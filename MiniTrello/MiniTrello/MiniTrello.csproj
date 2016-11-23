@@ -53,6 +53,12 @@
     </Compile>
     <Compile Include="Model\Checklist.cs" />
     <Compile Include="Model\TableauDbContext.cs" />
+    <Compile Include="View\CtrlListe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtrlListe.Designer.cs">
+      <DependentUpon>CtrlListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,16 +69,10 @@
       <DependentUpon>FrmTableau.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Liste.cs" />
-    <Compile Include="View\FormTestListe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormTestListe.Designer.cs">
-      <DependentUpon>FormTestListe.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\FormTestListe.resx">
-      <DependentUpon>FormTestListe.cs</DependentUpon>
+    <EmbeddedResource Include="View\CtrlListe.resx">
+      <DependentUpon>CtrlListe.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Model\Tableau.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
