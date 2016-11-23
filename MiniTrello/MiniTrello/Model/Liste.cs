@@ -8,5 +8,8 @@ namespace MiniTrello
 {
     class Liste
     {
+        public int Id { get; set; }
+        public string Titre { get; set; }
+        public List<Carte> Cartes { get; set; }
     }
 }
