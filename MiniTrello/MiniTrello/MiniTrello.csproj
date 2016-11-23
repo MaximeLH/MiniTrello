@@ -46,23 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carte.cs" />
-    <Compile Include="FrmTableau.cs">
+    <Compile Include="Model\Carte.cs" />
+    <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTableau.Designer.cs">
+    <Compile Include="View\FrmTableau.Designer.cs">
       <DependentUpon>FrmTableau.cs</DependentUpon>
     </Compile>
-    <Compile Include="Liste.cs" />
-    <Compile Include="FormTestListe.cs">
+    <Compile Include="Model\Liste.cs" />
+    <Compile Include="View\FormTestListe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTestListe.Designer.cs">
+    <Compile Include="View\FormTestListe.Designer.cs">
       <DependentUpon>FormTestListe.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormTestListe.resx">
+    <EmbeddedResource Include="View\FormTestListe.resx">
       <DependentUpon>FormTestListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -86,6 +86,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Business\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
