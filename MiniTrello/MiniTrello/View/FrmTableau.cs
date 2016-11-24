@@ -53,6 +53,7 @@ namespace MiniTrello
             pnlAjout.Controls.Add(ajout);
             pnlAjout.Controls.Add(annuler);
             ajout.Click += new EventHandler(ajout_Click);
+            annuler.Click += new EventHandler(annuler_Click);
         }
         private void ajout_Click(object sender, EventArgs e)
         {
@@ -60,7 +61,11 @@ namespace MiniTrello
             c.txtTitreListe.Text = txtAjout.Text;
             flnListe.Controls.Add(c);
         }
+        private void annuler_Click(object sender, EventArgs e)
+        {
 
-
+            pnlAjout.Controls.Remove(txtAjout);
+           
+        }
     }
 }
