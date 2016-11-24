@@ -18,11 +18,6 @@ namespace MiniTrello
             InitializeComponent();
         }
 
-        private void btnAjouterListe_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_Click(object sender, EventArgs e)
         {
             txtAjout.BackColor = Color.White;
@@ -30,7 +25,6 @@ namespace MiniTrello
             txtAjout.Text = "";
             Button ajout = new Button();
             ajout.Text = "Enregistrer";
-            ajout.Width = pnlAjout.Width - 80;
             ajout.BackColor = Color.LimeGreen;
             Button annuler = new Button();
             annuler.Text = "X";
