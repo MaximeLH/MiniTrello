@@ -12,6 +12,10 @@ namespace MiniTrello.View
 {
     public partial class CtrlListe : UserControl
     {
+        public CtrlListe()
+        {
+            InitializeComponent();
+        }
         private void btnAddCarte_Click(object sender, EventArgs e)
         {
             Carte carte = new Carte () ;
