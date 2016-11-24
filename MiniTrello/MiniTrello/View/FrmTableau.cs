@@ -61,6 +61,9 @@ namespace MiniTrello
             flnListe.Controls.Add(c);
         }
 
+        private void txtAjout_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
