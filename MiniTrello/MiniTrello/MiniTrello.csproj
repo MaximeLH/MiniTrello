@@ -61,6 +61,18 @@
     <Compile Include="Data\MinitrelloDB.cs" />
     <Compile Include="Model\Carte.cs" />
     <Compile Include="Model\ElementChecklist.cs" />
+    <Compile Include="View\CtlCheckList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtlCheckList.Designer.cs">
+      <DependentUpon>CtlCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CtlChecklistElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtlChecklistElement.Designer.cs">
+      <DependentUpon>CtlChecklistElement.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormulaireCarte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,12 @@
     </Compile>
     <Compile Include="View\CtrlListe.Designer.cs">
       <DependentUpon>CtrlListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmChecklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmChecklist.Designer.cs">
+      <DependentUpon>FrmChecklist.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
@@ -90,6 +108,12 @@
     <Compile Include="View\FrmTest.Designer.cs">
       <DependentUpon>FrmTest.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CtlCheckList.resx">
+      <DependentUpon>CtlCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\CtlChecklistElement.resx">
+      <DependentUpon>CtlChecklistElement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormulaireCarte.resx">
       <DependentUpon>FormulaireCarte.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="View\CtrlListe.resx">
       <DependentUpon>CtrlListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmChecklist.resx">
+      <DependentUpon>FrmChecklist.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmTableau.resx">
       <DependentUpon>FrmTableau.cs</DependentUpon>

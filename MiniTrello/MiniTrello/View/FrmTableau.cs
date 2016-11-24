@@ -52,6 +52,24 @@ namespace MiniTrello
             annuler.Width = 50;
             pnlAjout.Controls.Add(ajout);
             pnlAjout.Controls.Add(annuler);
+            ajout.Click += new EventHandler(ajout_Click);
+        }
+        private void ajout_Click(object sender, EventArgs e)
+        {
+            TextBox txtTitreCarte = new TextBox();
+            txtTitreCarte.Text = txtAjout.Text;
+
+            Button ajCarte = new Button();
+            ajCarte.Text = "Ajouter une carte";
+
+
+            flnListe.Controls.Add(txtTitreCarte);
+            flnListe.Controls.Add(ajCarte);
+        }
+
+        private void FrmTableau_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
