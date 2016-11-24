@@ -77,6 +77,12 @@
     <Compile Include="View\FrmTest.Designer.cs">
       <DependentUpon>FrmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FrmTestMoveCarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmTestMoveCarte.Designer.cs">
+      <DependentUpon>FrmTestMoveCarte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FormulaireCarte.resx">
       <DependentUpon>FormulaireCarte.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmTest.resx">
       <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmTestMoveCarte.resx">
+      <DependentUpon>FrmTestMoveCarte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
