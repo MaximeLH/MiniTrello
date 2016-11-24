@@ -56,20 +56,11 @@ namespace MiniTrello
         }
         private void ajout_Click(object sender, EventArgs e)
         {
-            TextBox txtTitreCarte = new TextBox();
-            txtTitreCarte.Text = txtAjout.Text;
-
-            Button ajCarte = new Button();
-            ajCarte.Text = "Ajouter une carte";
-
-
-            flnListe.Controls.Add(txtTitreCarte);
-            flnListe.Controls.Add(ajCarte);
+            CtrlListe c = new CtrlListe();
+            c.txtTitreListe.Text = txtAjout.Text;
+            flnListe.Controls.Add(c);
         }
 
-        private void FrmTableau_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
