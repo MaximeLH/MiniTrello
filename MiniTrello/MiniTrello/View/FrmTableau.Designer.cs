@@ -86,7 +86,6 @@
             this.txtAjout.TabIndex = 6;
             this.txtAjout.Text = "Ajouter une liste ...";
             this.txtAjout.Click += new System.EventHandler(this.textBox1_Click);
-            this.txtAjout.TextChanged += new System.EventHandler(this.txtAjout_TextChanged);
             // 
             // pnlAjout
             // 
