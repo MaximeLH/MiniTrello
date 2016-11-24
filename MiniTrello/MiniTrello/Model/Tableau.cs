@@ -8,7 +8,7 @@ namespace MiniTrello
 {
     class Tableau
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Titre { get; set; }
         public List<Liste> Listes { get; set; }
 

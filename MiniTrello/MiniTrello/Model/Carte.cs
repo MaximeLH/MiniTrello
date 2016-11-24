@@ -9,7 +9,7 @@ namespace MiniTrello
 {
     class Carte
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Titre { get; set; }
         public string Description { get; set; }
         List<Checklist> Checklists { get; set; }
