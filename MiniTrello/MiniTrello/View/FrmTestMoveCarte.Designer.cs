@@ -37,14 +37,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblRight = new System.Windows.Forms.Label();
-            this.lblLeft = new System.Windows.Forms.Label();
-            this.lblUp = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblRight = new System.Windows.Forms.Label();
+            this.lblLeft = new System.Windows.Forms.Label();
+            this.lblUp = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -144,47 +144,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "label2";
             // 
-            // lblRight
-            // 
-            this.lblRight.AutoSize = true;
-            this.lblRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRight.Location = new System.Drawing.Point(491, 122);
-            this.lblRight.Name = "lblRight";
-            this.lblRight.Size = new System.Drawing.Size(26, 16);
-            this.lblRight.TabIndex = 15;
-            this.lblRight.Text = "-->";
-            // 
-            // lblLeft
-            // 
-            this.lblLeft.AutoSize = true;
-            this.lblLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeft.Location = new System.Drawing.Point(459, 122);
-            this.lblLeft.Name = "lblLeft";
-            this.lblLeft.Size = new System.Drawing.Size(26, 16);
-            this.lblLeft.TabIndex = 16;
-            this.lblLeft.Text = "<--";
-            // 
-            // lblUp
-            // 
-            this.lblUp.AutoSize = true;
-            this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUp.Location = new System.Drawing.Point(411, 187);
-            this.lblUp.Name = "lblUp";
-            this.lblUp.Size = new System.Drawing.Size(25, 15);
-            this.lblUp.TabIndex = 17;
-            this.lblUp.Text = "Up";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label3.Location = new System.Drawing.Point(411, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Down";
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.button3);
@@ -225,6 +184,51 @@
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "label4";
+            // 
+            // lblRight
+            // 
+            this.lblRight.AutoSize = true;
+            this.lblRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRight.Location = new System.Drawing.Point(491, 122);
+            this.lblRight.Name = "lblRight";
+            this.lblRight.Size = new System.Drawing.Size(26, 16);
+            this.lblRight.TabIndex = 15;
+            this.lblRight.Text = "-->";
+            this.lblRight.Click += new System.EventHandler(this.lblRight_Click);
+            // 
+            // lblLeft
+            // 
+            this.lblLeft.AutoSize = true;
+            this.lblLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeft.Location = new System.Drawing.Point(459, 122);
+            this.lblLeft.Name = "lblLeft";
+            this.lblLeft.Size = new System.Drawing.Size(26, 16);
+            this.lblLeft.TabIndex = 16;
+            this.lblLeft.Text = "<--";
+            this.lblLeft.Click += new System.EventHandler(this.lblLeft_Click);
+            // 
+            // lblUp
+            // 
+            this.lblUp.AutoSize = true;
+            this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUp.Location = new System.Drawing.Point(411, 187);
+            this.lblUp.Name = "lblUp";
+            this.lblUp.Size = new System.Drawing.Size(25, 15);
+            this.lblUp.TabIndex = 17;
+            this.lblUp.Text = "Up";
+            this.lblUp.Click += new System.EventHandler(this.lblUp_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label3.Location = new System.Drawing.Point(411, 215);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 15);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Down";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FrmTestMoveCarte
             // 

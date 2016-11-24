@@ -20,7 +20,7 @@ namespace MiniTrello
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Database.SetInitializer(new MinitrelloInitializer());
-            Application.Run(new FrmTestMoveCarte());
+            Application.Run(new FrmTableau());
         }
     }
 }
