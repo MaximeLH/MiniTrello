@@ -1,6 +1,8 @@
-﻿using MiniTrello.View;
+﻿using Minitrello.Models;
+using MiniTrello.View;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +19,8 @@ namespace MiniTrello
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTestMoveCarte());
+            Database.SetInitializer(new MinitrelloInitializer());
+            Application.Run(new FrmTableau());
         }
     }
 }

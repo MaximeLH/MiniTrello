@@ -1,4 +1,6 @@
-﻿using MiniTrello.View;
+﻿using MiniTrello.Data;
+using MiniTrello.Model;
+using MiniTrello.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,25 @@ namespace MiniTrello
         public FrmTableau()
         {
             InitializeComponent();
+            using (var ctx = new MinitrelloDB())
+            {
+                Tableau t = new Tableau { Titre = "Deuxième Tableau " };
+                Liste l = new Liste { Titre = "Liste l2" };
+                Carte c = new Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
+                Checklist ch = new Checklist { };
+                ElementChecklist e = new ElementChecklist { Etat = true, TextElt = "element de checklist n°1" };
+
+                ch.CheckL = new List<ElementChecklist>();
+                ch.CheckL.Add(e);
+                c.Checklists = new List<Checklist>();
+                c.Checklists.Add(ch);
+                l.Cartes = new List<Carte>();
+                l.Cartes.Add(c);
+                t.Listes = new List<Liste>();
+                t.Listes.Add(l);
+                ctx.Tableaux.Add(t);
+                ctx.SaveChanges();
+            }
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -31,6 +52,24 @@ namespace MiniTrello
             annuler.Width = 50;
             pnlAjout.Controls.Add(ajout);
             pnlAjout.Controls.Add(annuler);
+            ajout.Click += new EventHandler(ajout_Click);
+        }
+        private void ajout_Click(object sender, EventArgs e)
+        {
+            TextBox txtTitreCarte = new TextBox();
+            txtTitreCarte.Text = txtAjout.Text;
+
+            Button ajCarte = new Button();
+            ajCarte.Text = "Ajouter une carte";
+
+
+            flnListe.Controls.Add(txtTitreCarte);
+            flnListe.Controls.Add(ajCarte);
+        }
+
+        private void FrmTableau_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
