@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace MiniTrello.Model
 {
-    class ElementChecklist
+    public class ElementChecklist
     {
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public string TextElt { get; set; }
         public bool Etat { get; set; }
-
+        public ElementChecklist()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }

@@ -5,21 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniTrello
+namespace MiniTrello.Model
 {
-    class Carte
+    public class Carte
     {
         public Guid Id { get; set; }
         public string Titre { get; set; }
         public string Description { get; set; }
-        List<Checklist> Checklists { get; set; }
-        public void AjouterChecklist(Checklist c)
+        public List<Checklist> Checklists { get; set; }
+        public Carte()
         {
-            Checklists.Add(c);
+            Id = Guid.NewGuid();
         }
-        public void SupprimerChecklist(Checklist c)
-        {
-            Checklists.Remove(c);
-        }
+
     }
 }
