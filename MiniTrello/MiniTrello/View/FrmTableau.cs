@@ -59,11 +59,31 @@ namespace MiniTrello
             CtrlListe c = new CtrlListe();
             c.txtTitreListe.Text = txtAjout.Text;
             flnListe.Controls.Add(c);
+            c.lblLeft.Click += new EventHandler(lblLeft_Click);
         }
 
         private void txtAjout_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void lblLeft_Click(object sender, EventArgs e)
+        {
+            var alphaIndex = flnListe.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flnListe.Controls)
+            {
+                if (flnListe.Controls.IndexOf(ctrl) == alphaIndex - 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flnListe.Controls.SetChildIndex(c, alphaIndex - 1);
+                flnListe.Controls.SetChildIndex(control, alphaIndex);
+            }
+        }
+
     }
 }

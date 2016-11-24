@@ -132,11 +132,11 @@
         #endregion
 
         private System.Windows.Forms.HScrollBar hScrollBar1;
-        private System.Windows.Forms.FlowLayoutPanel flnListe;
         private System.Windows.Forms.Label lblTitreTableau;
         private System.Windows.Forms.TextBox txtAjout;
         private System.Windows.Forms.FlowLayoutPanel pnlAjout;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flnListe;
     }
 }

@@ -56,7 +56,7 @@
             // 
             // txtTitreListe
             // 
-            this.txtTitreListe.Location = new System.Drawing.Point(3, 33);
+            this.txtTitreListe.Location = new System.Drawing.Point(3, 29);
             this.txtTitreListe.Name = "txtTitreListe";
             this.txtTitreListe.Size = new System.Drawing.Size(219, 20);
             this.txtTitreListe.TabIndex = 3;
@@ -66,7 +66,7 @@
             this.flpCartes.AutoScroll = true;
             this.flpCartes.AutoSize = true;
             this.flpCartes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpCartes.Location = new System.Drawing.Point(3, 59);
+            this.flpCartes.Location = new System.Drawing.Point(3, 55);
             this.flpCartes.Name = "flpCartes";
             this.flpCartes.Size = new System.Drawing.Size(0, 0);
             this.flpCartes.TabIndex = 4;
@@ -74,7 +74,7 @@
             // btnAddCarte
             // 
             this.btnAddCarte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddCarte.Location = new System.Drawing.Point(4, 65);
+            this.btnAddCarte.Location = new System.Drawing.Point(4, 61);
             this.btnAddCarte.Name = "btnAddCarte";
             this.btnAddCarte.Size = new System.Drawing.Size(216, 23);
             this.btnAddCarte.TabIndex = 1;
@@ -88,7 +88,7 @@
             this.flowLayoutPanel1.Controls.Add(this.lblRight);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 24);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 20);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // lblLeft
@@ -135,7 +135,7 @@
         internal System.Windows.Forms.TextBox txtTitreListe;
         private System.Windows.Forms.FlowLayoutPanel flpCartes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label lblLeft;
-        private System.Windows.Forms.Label lblRight;
+        internal System.Windows.Forms.Label lblLeft;
+        internal System.Windows.Forms.Label lblRight;
     }
 }
