@@ -20,11 +20,11 @@ namespace MiniTrello
             InitializeComponent();
             using (var ctx = new MinitrelloDB())
             {
-                Tableau t = new Tableau { Titre = "Premier Tableau !" };
-                Liste l = new Liste { Titre = "Liste l" };
-                Carte c = new Carte { Titre = "Carte c1" };
+                Tableau t = new Tableau { Titre = "Deuxième Tableau " };
+                Liste l = new Liste { Titre = "Liste l2" };
+                Carte c = new Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
                 Checklist ch = new Checklist { };
-                ElementChecklist e = new ElementChecklist { Etat = true };
+                ElementChecklist e = new ElementChecklist { Etat = true, TextElt = "element de checklist n°1" };
 
                 ch.CheckL = new List<ElementChecklist>();
                 ch.CheckL.Add(e);
