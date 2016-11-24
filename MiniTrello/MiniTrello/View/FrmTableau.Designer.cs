@@ -61,20 +61,19 @@
             // 
             this.flnListe.AutoScroll = true;
             this.flnListe.AutoSize = true;
-            this.flnListe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.flnListe.Location = new System.Drawing.Point(215, 13);
+            this.flnListe.BackColor = System.Drawing.SystemColors.Control;
+            this.flnListe.Location = new System.Drawing.Point(251, 14);
             this.flnListe.Name = "flnListe";
-            this.flnListe.Size = new System.Drawing.Size(697, 417);
+            this.flnListe.Size = new System.Drawing.Size(190, 413);
             this.flnListe.TabIndex = 2;
+            this.flnListe.WrapContents = false;
             // 
-            // pnlAjout
+            // lblTitreTableau
             // 
-            this.pnlAjout.Controls.Add(this.txtAjout);
-            this.pnlAjout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlAjout.Location = new System.Drawing.Point(41, 48);
-            this.pnlAjout.Name = "pnlAjout";
-            this.pnlAjout.Size = new System.Drawing.Size(200, 100);
-            this.pnlAjout.TabIndex = 7;
+            this.lblTitreTableau.Location = new System.Drawing.Point(0, 0);
+            this.lblTitreTableau.Name = "lblTitreTableau";
+            this.lblTitreTableau.Size = new System.Drawing.Size(100, 23);
+            this.lblTitreTableau.TabIndex = 9;
             // 
             // txtAjout
             // 
@@ -90,18 +89,20 @@
             // 
             // pnlAjout
             // 
+            this.pnlAjout.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pnlAjout.Controls.Add(this.txtAjout);
             this.pnlAjout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlAjout.Location = new System.Drawing.Point(3, 13);
+            this.pnlAjout.Location = new System.Drawing.Point(12, 14);
             this.pnlAjout.Name = "pnlAjout";
             this.pnlAjout.Size = new System.Drawing.Size(206, 100);
             this.pnlAjout.TabIndex = 7;
+            this.pnlAjout.WrapContents = false;
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.flnListe);
             this.panel1.Controls.Add(this.pnlAjout);
+            this.panel1.Controls.Add(this.flnListe);
             this.panel1.Location = new System.Drawing.Point(16, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(925, 449);
@@ -119,13 +120,11 @@
             this.Controls.Add(this.hScrollBar1);
             this.Name = "FrmTableau";
             this.Text = "FrmTableau";
-            this.Load += new System.EventHandler(this.FrmTableau_Load);
             this.pnlAjout.ResumeLayout(false);
             this.pnlAjout.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
