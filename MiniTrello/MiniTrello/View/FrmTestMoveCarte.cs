@@ -89,19 +89,40 @@ namespace MiniTrello.View
             }
         }
 
-        private void flowLayoutPanel2_DragEnter(object sender, DragEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            //    e.Effect = DragDropEffects.Move;
+            var alphaIndex = flowLayoutPanel2.Controls.IndexOf(panel3);
+            Control control = null;
+            foreach (Control c in flowLayoutPanel2.Controls)
+            {
+                if (flowLayoutPanel2.Controls.IndexOf(c) == alphaIndex - 1)
+                { control = c; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flowLayoutPanel2.Controls.SetChildIndex(panel3, alphaIndex - 1);
+                flowLayoutPanel2.Controls.SetChildIndex(control, alphaIndex);
+            }
         }
 
-    private void flowLayoutPanel2_DragDrop(object sender, DragEventArgs e)
-    {
-        //    GroupBox data = (GroupBox)e.Data.GetData(typeof(GroupBox));
-        //    Point p = flowLayoutPanel2.PointToClient(new Point(e.X, e.Y));
-        //    var item = flowLayoutPanel2.GetChildAtPoint(p);
-        //    int index = flowLayoutPanel2.Controls.GetChildIndex(item, false);
-        //    flowLayoutPanel2.Controls.SetChildIndex(data, index);
-        //    flowLayoutPanel2.Invalidate();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var alphaIndex = flowLayoutPanel2.Controls.IndexOf(panel3);
+            Control control = null;
+            foreach (Control c in flowLayoutPanel2.Controls)
+            {
+                if (flowLayoutPanel2.Controls.IndexOf(c) == alphaIndex + 1)
+                { control = c; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flowLayoutPanel2.Controls.SetChildIndex(panel3, alphaIndex + 1);
+                flowLayoutPanel2.Controls.SetChildIndex(control, alphaIndex);
+            }
+        }
     }
-}
 }

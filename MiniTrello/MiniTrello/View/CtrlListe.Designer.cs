@@ -30,11 +30,11 @@
         {
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtTitre = new System.Windows.Forms.TextBox();
-            this.txtCarte = new System.Windows.Forms.TextBox();
             this.btnAddCarte = new System.Windows.Forms.Button();
+            this.btnSupp = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddCom = new System.Windows.Forms.Button();
-            this.btnSupp = new System.Windows.Forms.Button();
+            this.txtCarte = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,13 +58,6 @@
             this.txtTitre.Size = new System.Drawing.Size(100, 20);
             this.txtTitre.TabIndex = 3;
             // 
-            // txtCarte
-            // 
-            this.txtCarte.Location = new System.Drawing.Point(3, 29);
-            this.txtCarte.Name = "txtCarte";
-            this.txtCarte.Size = new System.Drawing.Size(100, 20);
-            this.txtCarte.TabIndex = 4;
-            // 
             // btnAddCarte
             // 
             this.btnAddCarte.Location = new System.Drawing.Point(3, 55);
@@ -74,6 +67,15 @@
             this.btnAddCarte.Text = "Ajouter une carte";
             this.btnAddCarte.UseVisualStyleBackColor = true;
             this.btnAddCarte.Click += new System.EventHandler(this.btnAddCarte_Click);
+            // 
+            // btnSupp
+            // 
+            this.btnSupp.Location = new System.Drawing.Point(84, 3);
+            this.btnSupp.Name = "btnSupp";
+            this.btnSupp.Size = new System.Drawing.Size(75, 23);
+            this.btnSupp.TabIndex = 6;
+            this.btnSupp.Text = "X";
+            this.btnSupp.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
@@ -93,14 +95,12 @@
             this.btnAddCom.Text = "Ajouter";
             this.btnAddCom.UseVisualStyleBackColor = true;
             // 
-            // btnSupp
+            // txtCarte
             // 
-            this.btnSupp.Location = new System.Drawing.Point(84, 3);
-            this.btnSupp.Name = "btnSupp";
-            this.btnSupp.Size = new System.Drawing.Size(75, 23);
-            this.btnSupp.TabIndex = 6;
-            this.btnSupp.Text = "X";
-            this.btnSupp.UseVisualStyleBackColor = true;
+            this.txtCarte.Location = new System.Drawing.Point(3, 29);
+            this.txtCarte.Name = "txtCarte";
+            this.txtCarte.Size = new System.Drawing.Size(100, 20);
+            this.txtCarte.TabIndex = 4;
             // 
             // CtrlListe
             // 
@@ -120,10 +120,10 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnAddCarte;
-        private System.Windows.Forms.TextBox txtCarte;
-        private System.Windows.Forms.Button btnSupp;
-        private System.Windows.Forms.Button btnAddCom;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         internal System.Windows.Forms.TextBox txtTitre;
+        private System.Windows.Forms.TextBox txtCarte;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button btnAddCom;
+        private System.Windows.Forms.Button btnSupp;
     }
 }
