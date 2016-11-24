@@ -4,21 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniTrello
+namespace MiniTrello.Model
 {
-    class Tableau
+    public class Tableau
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Titre { get; set; }
         public List<Liste> Listes { get; set; }
-        //public void AjouterListe()
-        //{
+        public Tableau() {
+            Id = Guid.NewGuid();
+        }
 
-        //}
-
-        //public void SupprimerListe()
-        //{
-
-        //}
     }
 }

@@ -67,15 +67,23 @@
             this.flnListe.Size = new System.Drawing.Size(697, 417);
             this.flnListe.TabIndex = 2;
             // 
-            // lblTitreTableau
+            // pnlAjout
             // 
-            this.lblTitreTableau.AutoSize = true;
-            this.lblTitreTableau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitreTableau.Location = new System.Drawing.Point(12, 9);
-            this.lblTitreTableau.Name = "lblTitreTableau";
-            this.lblTitreTableau.Size = new System.Drawing.Size(45, 20);
-            this.lblTitreTableau.TabIndex = 4;
-            this.lblTitreTableau.Text = "Titre";
+            this.pnlAjout.Controls.Add(this.txtAjout);
+            this.pnlAjout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.pnlAjout.Location = new System.Drawing.Point(41, 48);
+            this.pnlAjout.Name = "pnlAjout";
+            this.pnlAjout.Size = new System.Drawing.Size(200, 100);
+            this.pnlAjout.TabIndex = 7;
+            // 
+            // txtTitreTableau
+            // 
+            this.txtTitreTableau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitreTableau.Location = new System.Drawing.Point(12, 12);
+            this.txtTitreTableau.Name = "txtTitreTableau";
+            this.txtTitreTableau.Size = new System.Drawing.Size(109, 26);
+            this.txtTitreTableau.TabIndex = 8;
+            this.txtTitreTableau.Text = "Titre";
             // 
             // txtAjout
             // 

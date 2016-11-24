@@ -7,22 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MiniTrello.Model;
 
 namespace MiniTrello.View
 {
-    public partial class CtrlListe : UserControl
+    public partial class CtlCheckList : UserControl
     {
-        public CtrlListe()
+        public CtlCheckList()
         {
             InitializeComponent();
         }
-        private void btnAddCarte_Click(object sender, EventArgs e)
-        {
-            Carte carte = new Carte () ;
-            carte.Titre = txtCarte.Text;
-            
 
+        private void LinkLblAddElement_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CtlChecklistElement c1 = new CtlChecklistElement();
+            FlowLayoutPnlCheckListElt.Controls.Add(c1);
         }
     }
 }

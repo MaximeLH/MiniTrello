@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MiniTrello.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,12 @@ namespace MiniTrello
         private void FormulaireCarte_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnAjouter_Click(object sender, EventArgs e)
+        {
+            CtlCheckList c1 = new CtlCheckList();
+            FlowLayoutPnlCheckLists.Controls.Add(c1);
         }
     }
 }
