@@ -61,8 +61,8 @@
             // 
             this.flnListe.AutoScroll = true;
             this.flnListe.AutoSize = true;
-            this.flnListe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.flnListe.Location = new System.Drawing.Point(240, 14);
+            this.flnListe.BackColor = System.Drawing.SystemColors.Control;
+            this.flnListe.Location = new System.Drawing.Point(251, 14);
             this.flnListe.Name = "flnListe";
             this.flnListe.Size = new System.Drawing.Size(190, 413);
             this.flnListe.TabIndex = 2;
@@ -120,7 +120,6 @@
             this.Controls.Add(this.hScrollBar1);
             this.Name = "FrmTableau";
             this.Text = "FrmTableau";
-            this.Load += new System.EventHandler(this.FrmTableau_Load);
             this.pnlAjout.ResumeLayout(false);
             this.pnlAjout.PerformLayout();
             this.panel1.ResumeLayout(false);

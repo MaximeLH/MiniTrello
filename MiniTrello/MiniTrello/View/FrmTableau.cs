@@ -56,14 +56,11 @@ namespace MiniTrello
         }
         private void ajout_Click(object sender, EventArgs e)
         {
-
-            flnListe.Controls.Add(txtTitreCarte);
-            flnListe.Controls.Add(ajCarte);
+            CtrlListe c = new CtrlListe();
+            c.txtTitreListe.Text = txtAjout.Text;
+            flnListe.Controls.Add(c);
         }
 
-        private void FrmTableau_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

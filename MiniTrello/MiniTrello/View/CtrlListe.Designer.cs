@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtTitre = new System.Windows.Forms.TextBox();
+            this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.btnAddCarte = new System.Windows.Forms.Button();
-            this.flowLayoutPanel2.SuspendLayout();
+            this.flnCarte.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel2
+            // flnCarte
             // 
-            this.flowLayoutPanel2.Controls.Add(this.txtTitre);
-            this.flowLayoutPanel2.Controls.Add(this.btnAddCarte);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(53, 28);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(119, 209);
-            this.flowLayoutPanel2.TabIndex = 4;
+            this.flnCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flnCarte.Controls.Add(this.txtTitreListe);
+            this.flnCarte.Controls.Add(this.btnAddCarte);
+            this.flnCarte.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flnCarte.Location = new System.Drawing.Point(3, 3);
+            this.flnCarte.Name = "flnCarte";
+            this.flnCarte.Size = new System.Drawing.Size(222, 89);
+            this.flnCarte.TabIndex = 4;
             // 
-            // txtTitre
+            // txtTitreListe
             // 
-            this.txtTitre.Location = new System.Drawing.Point(3, 3);
-            this.txtTitre.Name = "txtTitre";
-            this.txtTitre.Size = new System.Drawing.Size(116, 20);
-            this.txtTitre.TabIndex = 3;
+            this.txtTitreListe.Location = new System.Drawing.Point(3, 3);
+            this.txtTitreListe.Name = "txtTitreListe";
+            this.txtTitreListe.Size = new System.Drawing.Size(219, 20);
+            this.txtTitreListe.TabIndex = 3;
             // 
             // btnAddCarte
             // 
             this.btnAddCarte.Location = new System.Drawing.Point(3, 29);
             this.btnAddCarte.Name = "btnAddCarte";
-            this.btnAddCarte.Size = new System.Drawing.Size(116, 23);
+            this.btnAddCarte.Size = new System.Drawing.Size(216, 23);
             this.btnAddCarte.TabIndex = 1;
             this.btnAddCarte.Text = "Ajouter une carte";
             this.btnAddCarte.UseVisualStyleBackColor = true;
@@ -65,19 +66,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.AutoScroll = true;
+            this.Controls.Add(this.flnCarte);
             this.Name = "CtrlListe";
-            this.Size = new System.Drawing.Size(433, 359);
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
+            this.Size = new System.Drawing.Size(251, 113);
+            this.flnCarte.ResumeLayout(false);
+            this.flnCarte.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flnCarte;
         private System.Windows.Forms.Button btnAddCarte;
-        internal System.Windows.Forms.TextBox txtTitre;
+        internal System.Windows.Forms.TextBox txtTitreListe;
     }
 }
