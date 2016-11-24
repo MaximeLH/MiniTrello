@@ -29,7 +29,20 @@ namespace MiniTrello
         private void BtnAjouter_Click(object sender, EventArgs e)
         {
             CtlCheckList c1 = new CtlCheckList();
+            c1.Selected += C1_Selected;
             FlowLayoutPnlCheckLists.Controls.Add(c1);
+        }
+
+        public CtlCheckList ctlSelected;
+
+        private void C1_Selected(object sender, EventArgs e)
+        {
+            ctlSelected = (CtlCheckList) sender;
+        }
+
+        private void BtnSupprimer_Click(object sender, EventArgs e)
+        {
+            FlowLayoutPnlCheckLists.Controls.Remove(ctlSelected);
         }
     }
 }
