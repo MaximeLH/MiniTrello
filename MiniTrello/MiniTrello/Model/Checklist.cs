@@ -11,13 +11,6 @@ namespace MiniTrello.Model
         public int Id { get; set; }
         public List<ElementChecklist> CheckL { get; set; }
 
-        public void AjouterElementChecklist (ElementChecklist e)
-        {
-            CheckL.Add(e);
-        }
-        public void SupprimerElementChecklist(ElementChecklist e)
-        {
-            CheckL.Remove(e);
-        }
+
     }
 }
