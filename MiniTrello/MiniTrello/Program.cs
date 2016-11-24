@@ -17,7 +17,7 @@ namespace MiniTrello
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmTableau());
+            Application.Run(new Titre());
         }
     }
 }
