@@ -34,13 +34,12 @@
             this.flnListe = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitreTableau = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.BtnResetDB = new System.Windows.Forms.ToolStripButton();
-            //this.pnlAjout.SuspendLayout();
+            this.btnAjoutListe = new System.Windows.Forms.Button();
+            this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.btnSuppListe = new System.Windows.Forms.Button();
             this.btnEnregistrerListe = new System.Windows.Forms.Button();
-            this.txtTitreListe = new System.Windows.Forms.TextBox();
-            this.btnAjoutListe = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnResetDB = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -94,6 +93,23 @@
             this.panel1.Size = new System.Drawing.Size(925, 449);
             this.panel1.TabIndex = 8;
             // 
+            // btnAjoutListe
+            // 
+            this.btnAjoutListe.Location = new System.Drawing.Point(15, 14);
+            this.btnAjoutListe.Name = "btnAjoutListe";
+            this.btnAjoutListe.Size = new System.Drawing.Size(203, 23);
+            this.btnAjoutListe.TabIndex = 0;
+            this.btnAjoutListe.Text = "Ajouter une liste...";
+            this.btnAjoutListe.UseVisualStyleBackColor = true;
+            this.btnAjoutListe.Click += new System.EventHandler(this.btnAjoutListe_Click);
+            // 
+            // txtTitreListe
+            // 
+            this.txtTitreListe.Location = new System.Drawing.Point(15, 17);
+            this.txtTitreListe.Name = "txtTitreListe";
+            this.txtTitreListe.Size = new System.Drawing.Size(203, 20);
+            this.txtTitreListe.TabIndex = 3;
+            // 
             // btnSuppListe
             // 
             this.btnSuppListe.BackColor = System.Drawing.Color.Firebrick;
@@ -108,32 +124,15 @@
             // 
             // btnEnregistrerListe
             // 
-            this.btnEnregistrerListe.BackColor = System.Drawing.Color.Lime;
+            this.btnEnregistrerListe.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnEnregistrerListe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEnregistrerListe.Location = new System.Drawing.Point(15, 53);
             this.btnEnregistrerListe.Name = "btnEnregistrerListe";
-            this.btnEnregistrerListe.Size = new System.Drawing.Size(86, 25);
+            this.btnEnregistrerListe.Size = new System.Drawing.Size(98, 25);
             this.btnEnregistrerListe.TabIndex = 4;
             this.btnEnregistrerListe.Text = "Enregistrer";
             this.btnEnregistrerListe.UseVisualStyleBackColor = false;
             this.btnEnregistrerListe.Click += new System.EventHandler(this.btnEnregistrerListe_Click);
-            // 
-            // txtTitreListe
-            // 
-            this.txtTitreListe.Location = new System.Drawing.Point(15, 17);
-            this.txtTitreListe.Name = "txtTitreListe";
-            this.txtTitreListe.Size = new System.Drawing.Size(203, 20);
-            this.txtTitreListe.TabIndex = 3;
-            // 
-            // btnAjoutListe
-            // 
-            this.btnAjoutListe.Location = new System.Drawing.Point(15, 14);
-            this.btnAjoutListe.Name = "btnAjoutListe";
-            this.btnAjoutListe.Size = new System.Drawing.Size(203, 23);
-            this.btnAjoutListe.TabIndex = 0;
-            this.btnAjoutListe.Text = "Ajouter une liste...";
-            this.btnAjoutListe.UseVisualStyleBackColor = true;
-            this.btnAjoutListe.Click += new System.EventHandler(this.btnAjoutListe_Click);
             // 
             // toolStrip1
             // 
