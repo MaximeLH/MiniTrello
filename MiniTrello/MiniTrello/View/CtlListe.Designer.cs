@@ -132,8 +132,6 @@ namespace MiniTrello.View
             this.flnCarte.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-
         }
 
         #endregion
