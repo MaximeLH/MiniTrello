@@ -45,7 +45,6 @@
             this.flnCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flnCarte.Controls.Add(this.txtTitreListe);
             this.flnCarte.Controls.Add(this.flpCartes);
-            this.flnCarte.Controls.Add(this.txtBoxTitreCarte);
             this.flnCarte.Controls.Add(this.btnAddCarte);
             this.flnCarte.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flnCarte.Location = new System.Drawing.Point(3, 23);
