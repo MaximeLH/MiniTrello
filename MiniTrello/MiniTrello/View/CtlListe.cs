@@ -32,5 +32,12 @@ namespace MiniTrello.View
             flpCartes.Controls.Add(ctCarte);
 
         }
+
+        public event EventHandler SupprimeMoi;
+
+        private void btnSuppListe_Click(object sender, EventArgs e)
+        {
+            SupprimeMoi?.Invoke(this, null);
+        }
     }
 }

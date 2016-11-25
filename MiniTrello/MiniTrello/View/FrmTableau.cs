@@ -22,40 +22,90 @@ namespace MiniTrello
         {
             InitializeComponent();
             ctx = new MinitrelloDB();
+            PremiereConfig();
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
+        public void btnAjoutListe_Click(object sender, EventArgs e)
         {
-            txtAjout.BackColor = Color.White;
-            txtAjout.BorderStyle = BorderStyle.Fixed3D;
-            txtAjout.Text = "";
-            Button ajout = new Button();
-            ajout.Text = "Enregistrer";
-            ajout.BackColor = Color.LimeGreen;
-            Button annuler = new Button();
-            annuler.Text = "X";
-            annuler.Width = 50;
-            pnlAjout.Controls.Add(ajout);
-            pnlAjout.Controls.Add(annuler);
-            ajout.Click += new EventHandler(ajout_Click);
-            annuler.Click += new EventHandler(annuler_Click);
+            DeuxiemeConfig();
         }
-        private void ajout_Click(object sender, EventArgs e)
+        public void PremiereConfig()
+        {
+            btnAjoutListe.Visible = true;
+            txtTitreListe.Visible = false;
+            btnEnregistrerListe.Visible = false;
+            btnSuppListe.Visible = false;
+        }
+        public void DeuxiemeConfig()
+        {
+            btnAjoutListe.Visible = false;
+            txtTitreListe.Visible = true;
+            btnEnregistrerListe.Visible = true;
+            btnSuppListe.Visible = true;
+        }
+
+        private void btnEnregistrerListe_Click(object sender, EventArgs e)
         {
             CtlListe c = new CtlListe();
-            c.txtTitreListe.Text = txtAjout.Text;
+            c.txtTitreListe.Text = txtTitreListe.Text;
             flnListe.Controls.Add(c);
-        }
-        private void annuler_Click(object sender, EventArgs e)
-        {
+            PremiereConfig();
+            c.lblLeft.Click += delegate (object s, EventArgs ev) { lblLeft_Click(sender, e, c); };
+            c.lblRight.Click += delegate (object s, EventArgs ev) { lblRight_Click(sender, e, c); };
 
-            pnlAjout.Controls.Remove(txtAjout);
-           
+            c.SupprimeMoi += delegate (object s, EventArgs ev) { C_SupprimeMoi(sender, e, c); };
+
+        }
+
+        private void C_SupprimeMoi(object sender, EventArgs e, CtlListe c)
+        {
+            flnListe.Controls.Remove(c);
+        }
+
+        private void lblLeft_Click(object sender, EventArgs e, CtlListe c)
+        {
+            var alphaIndex = flnListe.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flnListe.Controls)
+            {
+                if (flnListe.Controls.IndexOf(ctrl) == alphaIndex - 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flnListe.Controls.SetChildIndex(c, alphaIndex - 1);
+                flnListe.Controls.SetChildIndex(control, alphaIndex);
+            }
+        }
+
+        private void lblRight_Click(object sender, EventArgs e, CtlListe c)
+        {
+            var alphaIndex = flnListe.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flnListe.Controls)
+            {
+                if (flnListe.Controls.IndexOf(ctrl) == alphaIndex + 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flnListe.Controls.SetChildIndex(c, alphaIndex + 1);
+                flnListe.Controls.SetChildIndex(control, alphaIndex);
+            }
+        }
+
+        private void btnSuppListe_Click(object sender, EventArgs e)
+        {
+            PremiereConfig();
         }
 
         private void BtnResetDB_Click(object sender, EventArgs e)
         {
-            
+
             foreach (var item in ctx.Tableaux)
             {
                 ctx.Tableaux.Remove(item);

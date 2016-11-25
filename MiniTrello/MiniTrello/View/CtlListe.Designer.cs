@@ -32,7 +32,10 @@
             this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddCarte = new System.Windows.Forms.Button();
-            this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
+            this.lblRight = new System.Windows.Forms.Label();
+            this.lblLeft = new System.Windows.Forms.Label();
+            this.btnSuppListe = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.flnCarte.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,7 @@
             this.flnCarte.Controls.Add(this.txtBoxTitreCarte);
             this.flnCarte.Controls.Add(this.btnAddCarte);
             this.flnCarte.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flnCarte.Location = new System.Drawing.Point(3, 3);
+            this.flnCarte.Location = new System.Drawing.Point(3, 23);
             this.flnCarte.MaximumSize = new System.Drawing.Size(227, 500);
             this.flnCarte.Name = "flnCarte";
             this.flnCarte.Size = new System.Drawing.Size(227, 89);
@@ -72,29 +75,57 @@
             // btnAddCarte
             // 
             this.btnAddCarte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddCarte.Location = new System.Drawing.Point(4, 61);
+            this.btnAddCarte.Location = new System.Drawing.Point(3, 35);
             this.btnAddCarte.Name = "btnAddCarte";
-            this.btnAddCarte.Size = new System.Drawing.Size(216, 23);
+            this.btnAddCarte.Size = new System.Drawing.Size(219, 23);
             this.btnAddCarte.TabIndex = 1;
             this.btnAddCarte.Text = "Ajouter une carte";
             this.btnAddCarte.UseVisualStyleBackColor = true;
             this.btnAddCarte.Click += new System.EventHandler(this.btnAddCarte_Click);
             // 
-            // txtBoxTitreCarte
+            // lblRight
             // 
-            this.txtBoxTitreCarte.Location = new System.Drawing.Point(3, 35);
-            this.txtBoxTitreCarte.Name = "txtBoxTitreCarte";
-            this.txtBoxTitreCarte.Size = new System.Drawing.Size(217, 20);
-            this.txtBoxTitreCarte.TabIndex = 5;
+            this.lblRight.AutoSize = true;
+            this.lblRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRight.Location = new System.Drawing.Point(32, 0);
+            this.lblRight.Name = "lblRight";
+            this.lblRight.Size = new System.Drawing.Size(26, 16);
+            this.lblRight.TabIndex = 17;
+            this.lblRight.Text = "-->";
+            // 
+            // lblLeft
+            // 
+            this.lblLeft.AutoSize = true;
+            this.lblLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeft.Location = new System.Drawing.Point(0, 0);
+            this.lblLeft.Name = "lblLeft";
+            this.lblLeft.Size = new System.Drawing.Size(26, 16);
+            this.lblLeft.TabIndex = 18;
+            this.lblLeft.Text = "<--";
+            // 
+            // btnSuppListe
+            // 
+            this.btnSuppListe.BackColor = System.Drawing.Color.Red;
+            this.btnSuppListe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSuppListe.Location = new System.Drawing.Point(199, 0);
+            this.btnSuppListe.Name = "btnSuppListe";
+            this.btnSuppListe.Size = new System.Drawing.Size(31, 21);
+            this.btnSuppListe.TabIndex = 19;
+            this.btnSuppListe.Text = "X";
+            this.btnSuppListe.UseVisualStyleBackColor = false;
+            this.btnSuppListe.Click += new System.EventHandler(this.btnSuppListe_Click);
             // 
             // CtlListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.btnSuppListe);
+            this.Controls.Add(this.lblRight);
+            this.Controls.Add(this.lblLeft);
             this.Controls.Add(this.flnCarte);
             this.Name = "CtlListe";
-            this.Size = new System.Drawing.Size(251, 113);
+            this.Size = new System.Drawing.Size(251, 129);
             this.flnCarte.ResumeLayout(false);
             this.flnCarte.PerformLayout();
             this.ResumeLayout(false);
@@ -103,11 +134,13 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flnCarte;
         private System.Windows.Forms.Button btnAddCarte;
         internal System.Windows.Forms.TextBox txtTitreListe;
         public System.Windows.Forms.FlowLayoutPanel flpCartes;
-        private System.Windows.Forms.TextBox txtBoxTitreCarte;
+        private System.Windows.Forms.FlowLayoutPanel flnCarte;
+        internal System.Windows.Forms.Label lblLeft;
+        internal System.Windows.Forms.Label lblRight;
+        private System.Windows.Forms.Button btnSuppListe;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

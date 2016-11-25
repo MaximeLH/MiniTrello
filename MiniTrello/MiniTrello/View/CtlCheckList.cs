@@ -17,19 +17,6 @@ namespace MiniTrello.View
             InitializeComponent();
         }
 
-        private void LinkLblAddElement_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            CtlChecklistElement c1 = new CtlChecklistElement();
-            c1.Selected += C2_Selected;
-            FlowLayoutPnlCheckListElt.Controls.Add(c1);
-        }
-
-        private void LinkLblSupprElt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FlowLayoutPnlCheckListElt.Controls.Remove(ctlElementSelected);
-
-        }
-
         public CtlChecklistElement ctlElementSelected;
 
         private void C2_Selected(object sender, EventArgs e)
@@ -37,11 +24,45 @@ namespace MiniTrello.View
             ctlElementSelected = (CtlChecklistElement)sender;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        public event EventHandler Selected;
+
+        private void ResizePanel()
         {
-            Selected?.Invoke(this, e);
+            int height = 0;
+
+            foreach (Control ctl in FlowLayoutPnlCheckListElt.Controls)
+            {
+                height += ctl.Height;
+            }
+
+            FlowLayoutPnlCheckListElt.Height = height;
+            LinkLblAddElement.Top = height;
+            LinkLblSupprElt.Top = height;
+
         }
 
-        public event EventHandler Selected;
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+                Selected?.Invoke(this, e);
+            else
+                Selected?.Invoke(null, e);
+        }
+
+        private void LinkLblAddElement_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CtlChecklistElement c1 = new CtlChecklistElement();
+            c1.Selected += C2_Selected;
+            FlowLayoutPnlCheckListElt.Controls.Add(c1);
+
+            ResizePanel();
+        }
+
+        private void LinkLblSupprElt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FlowLayoutPnlCheckListElt.Controls.Remove(ctlElementSelected);
+
+            ResizePanel();
+        }
     }
 }

@@ -33,12 +33,14 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.flnListe = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitreTableau = new System.Windows.Forms.Label();
-            this.txtAjout = new System.Windows.Forms.TextBox();
-            this.pnlAjout = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnResetDB = new System.Windows.Forms.ToolStripButton();
-            this.pnlAjout.SuspendLayout();
+            //this.pnlAjout.SuspendLayout();
+            this.btnSuppListe = new System.Windows.Forms.Button();
+            this.btnEnregistrerListe = new System.Windows.Forms.Button();
+            this.txtTitreListe = new System.Windows.Forms.TextBox();
+            this.btnAjoutListe = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,38 +81,59 @@
             this.lblTitreTableau.Size = new System.Drawing.Size(100, 23);
             this.lblTitreTableau.TabIndex = 9;
             // 
-            // txtAjout
-            // 
-            this.txtAjout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtAjout.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAjout.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtAjout.Location = new System.Drawing.Point(3, 3);
-            this.txtAjout.Name = "txtAjout";
-            this.txtAjout.Size = new System.Drawing.Size(197, 13);
-            this.txtAjout.TabIndex = 6;
-            this.txtAjout.Text = "Ajouter une liste ...";
-            this.txtAjout.Click += new System.EventHandler(this.textBox1_Click);
-            // 
-            // pnlAjout
-            // 
-            this.pnlAjout.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pnlAjout.Controls.Add(this.txtAjout);
-            this.pnlAjout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlAjout.Location = new System.Drawing.Point(12, 14);
-            this.pnlAjout.Name = "pnlAjout";
-            this.pnlAjout.Size = new System.Drawing.Size(206, 100);
-            this.pnlAjout.TabIndex = 7;
-            this.pnlAjout.WrapContents = false;
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.pnlAjout);
+            this.panel1.Controls.Add(this.btnAjoutListe);
+            this.panel1.Controls.Add(this.txtTitreListe);
+            this.panel1.Controls.Add(this.btnSuppListe);
             this.panel1.Controls.Add(this.flnListe);
+            this.panel1.Controls.Add(this.btnEnregistrerListe);
             this.panel1.Location = new System.Drawing.Point(16, 32);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(925, 449);
             this.panel1.TabIndex = 8;
+            // 
+            // btnSuppListe
+            // 
+            this.btnSuppListe.BackColor = System.Drawing.Color.Firebrick;
+            this.btnSuppListe.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSuppListe.Location = new System.Drawing.Point(149, 53);
+            this.btnSuppListe.Name = "btnSuppListe";
+            this.btnSuppListe.Size = new System.Drawing.Size(40, 24);
+            this.btnSuppListe.TabIndex = 5;
+            this.btnSuppListe.Text = "X";
+            this.btnSuppListe.UseVisualStyleBackColor = false;
+            this.btnSuppListe.Click += new System.EventHandler(this.btnSuppListe_Click);
+            // 
+            // btnEnregistrerListe
+            // 
+            this.btnEnregistrerListe.BackColor = System.Drawing.Color.Lime;
+            this.btnEnregistrerListe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEnregistrerListe.Location = new System.Drawing.Point(15, 53);
+            this.btnEnregistrerListe.Name = "btnEnregistrerListe";
+            this.btnEnregistrerListe.Size = new System.Drawing.Size(86, 25);
+            this.btnEnregistrerListe.TabIndex = 4;
+            this.btnEnregistrerListe.Text = "Enregistrer";
+            this.btnEnregistrerListe.UseVisualStyleBackColor = false;
+            this.btnEnregistrerListe.Click += new System.EventHandler(this.btnEnregistrerListe_Click);
+            // 
+            // txtTitreListe
+            // 
+            this.txtTitreListe.Location = new System.Drawing.Point(15, 17);
+            this.txtTitreListe.Name = "txtTitreListe";
+            this.txtTitreListe.Size = new System.Drawing.Size(203, 20);
+            this.txtTitreListe.TabIndex = 3;
+            // 
+            // btnAjoutListe
+            // 
+            this.btnAjoutListe.Location = new System.Drawing.Point(15, 14);
+            this.btnAjoutListe.Name = "btnAjoutListe";
+            this.btnAjoutListe.Size = new System.Drawing.Size(203, 23);
+            this.btnAjoutListe.TabIndex = 0;
+            this.btnAjoutListe.Text = "Ajouter une liste...";
+            this.btnAjoutListe.UseVisualStyleBackColor = true;
+            this.btnAjoutListe.Click += new System.EventHandler(this.btnAjoutListe_Click);
             // 
             // toolStrip1
             // 
@@ -145,8 +168,6 @@
             this.Controls.Add(this.hScrollBar1);
             this.Name = "FrmTableau";
             this.Text = "FrmTableau";
-            this.pnlAjout.ResumeLayout(false);
-            this.pnlAjout.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -158,14 +179,16 @@
 
         #endregion
 
-        private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flnListe;
+        private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Label lblTitreTableau;
-        private System.Windows.Forms.TextBox txtAjout;
-        private System.Windows.Forms.FlowLayoutPanel pnlAjout;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnResetDB;
+        private System.Windows.Forms.Button btnAjoutListe;
+        private System.Windows.Forms.TextBox txtTitreListe;
+        private System.Windows.Forms.Button btnSuppListe;
+        private System.Windows.Forms.Button btnEnregistrerListe;
     }
 }
