@@ -1,4 +1,4 @@
-﻿using Minitrello.Models;
+﻿using MiniTrello.Data;
 using MiniTrello.View;
 using System;
 using System.Collections.Generic;

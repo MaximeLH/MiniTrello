@@ -19,13 +19,13 @@ namespace MiniTrello.View
 
         private void CtlCarte_Click(object sender, EventArgs e)
         {
-            Titre t = new MiniTrello.Titre();
+            FrmCarte t = new MiniTrello.FrmCarte();
             t.ShowDialog();
         }
 
         private void CtlCarte_MouseClick(object sender, MouseEventArgs e)
         {
-            Titre t = new MiniTrello.Titre();
+            FrmCarte t = new MiniTrello.FrmCarte();
             t.ShowDialog();
         }
     }

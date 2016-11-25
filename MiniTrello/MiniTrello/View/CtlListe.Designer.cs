@@ -1,6 +1,6 @@
 ﻿namespace MiniTrello.View
 {
-    partial class CtrlListe
+    partial class CtlListe
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.

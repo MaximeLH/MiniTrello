@@ -22,7 +22,7 @@ namespace MiniTrello
             {
                 Tableau t = new Tableau { Titre = "Deuxième Tableau " };
                 Liste l = new Liste { Titre = "Liste l2" };
-                Carte c = new Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
+                Model.Carte c = new Model.Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
                 Checklist ch = new Checklist { };
                 ElementChecklist e = new ElementChecklist { Etat = true, TextElt = "element de checklist n°1" };
 
@@ -30,7 +30,7 @@ namespace MiniTrello
                 ch.CheckL.Add(e);
                 c.Checklists = new List<Checklist>();
                 c.Checklists.Add(ch);
-                l.Cartes = new List<Carte>();
+                l.Cartes = new List<Model.Carte>();
                 l.Cartes.Add(c);
                 t.Listes = new List<Liste>();
                 t.Listes.Add(l);
@@ -57,7 +57,7 @@ namespace MiniTrello
         }
         private void ajout_Click(object sender, EventArgs e)
         {
-            CtrlListe c = new CtrlListe();
+            CtlListe c = new CtlListe();
             c.txtTitreListe.Text = txtAjout.Text;
             flnListe.Controls.Add(c);
         }
