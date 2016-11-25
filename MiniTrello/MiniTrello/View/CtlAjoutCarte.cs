@@ -11,17 +11,11 @@ using MiniTrello.Model;
 
 namespace MiniTrello.View
 {
-    public partial class CtrlListe : UserControl
+    public partial class CtlAjoutCarte : UserControl
     {
-        public CtrlListe()
+        public CtlAjoutCarte()
         {
             InitializeComponent();
         }
-        public void btnAddCarte_Click(object sender, EventArgs e)
-        {
-            CtlCarte ctCarte = new CtlCarte();
-            flpCartes.Controls.Add(ctCarte);         
-
-        }
-    }
+            }
 }

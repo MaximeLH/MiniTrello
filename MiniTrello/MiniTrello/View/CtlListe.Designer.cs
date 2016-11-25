@@ -1,6 +1,6 @@
 ﻿namespace MiniTrello.View
 {
-    partial class CtrlListe
+    partial class CtlListe
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -58,6 +58,7 @@
             // 
             // flpCartes
             // 
+            this.flpCartes.AccessibleName = "flpCartes";
             this.flpCartes.AutoScroll = true;
             this.flpCartes.AutoSize = true;
             this.flpCartes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -97,6 +98,6 @@
         private System.Windows.Forms.FlowLayoutPanel flnCarte;
         private System.Windows.Forms.Button btnAddCarte;
         internal System.Windows.Forms.TextBox txtTitreListe;
-        private System.Windows.Forms.FlowLayoutPanel flpCartes;
+        public System.Windows.Forms.FlowLayoutPanel flpCartes;
     }
 }
