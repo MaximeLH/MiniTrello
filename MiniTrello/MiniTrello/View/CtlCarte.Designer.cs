@@ -32,6 +32,8 @@ namespace MiniTrello.View
         {
             this.lblTitreCarte = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+
             this.lblUp = new System.Windows.Forms.Label();
             this.lblDown = new System.Windows.Forms.Label();
             this.btnSupCarteListe = new System.Windows.Forms.Button();
@@ -123,6 +125,7 @@ namespace MiniTrello.View
         #endregion
 
         private System.Windows.Forms.Label lblTitreCarte;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         internal System.Windows.Forms.Label lblUp;
         internal System.Windows.Forms.Label lblDown;
