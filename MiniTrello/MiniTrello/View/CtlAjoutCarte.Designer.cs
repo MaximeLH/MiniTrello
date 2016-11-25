@@ -30,8 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
-            this.btnAjoutCarte = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,41 +44,20 @@
             // txtBoxTitreCarte
             // 
             this.txtBoxTitreCarte.Location = new System.Drawing.Point(3, 16);
-            this.txtBoxTitreCarte.MinimumSize = new System.Drawing.Size(346, 58);
+            this.txtBoxTitreCarte.MinimumSize = new System.Drawing.Size(210, 58);
             this.txtBoxTitreCarte.Multiline = true;
             this.txtBoxTitreCarte.Name = "txtBoxTitreCarte";
-            this.txtBoxTitreCarte.Size = new System.Drawing.Size(346, 58);
+            this.txtBoxTitreCarte.Size = new System.Drawing.Size(210, 58);
             this.txtBoxTitreCarte.TabIndex = 1;
-            // 
-            // btnAjoutCarte
-            // 
-            this.btnAjoutCarte.Location = new System.Drawing.Point(44, 80);
-            this.btnAjoutCarte.Name = "btnAjoutCarte";
-            this.btnAjoutCarte.Size = new System.Drawing.Size(75, 23);
-            this.btnAjoutCarte.TabIndex = 2;
-            this.btnAjoutCarte.Text = "Ajouter";
-            this.btnAjoutCarte.UseVisualStyleBackColor = true;
-            this.btnAjoutCarte.Click += new System.EventHandler(this.btnAjoutCarte_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(223, 80);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "Annuler";
-            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // CtlAjoutCarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAjoutCarte);
             this.Controls.Add(this.txtBoxTitreCarte);
             this.Controls.Add(this.label1);
             this.Name = "CtlAjoutCarte";
-            this.Size = new System.Drawing.Size(352, 113);
+            this.Size = new System.Drawing.Size(220, 84);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,7 +67,5 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxTitreCarte;
-        private System.Windows.Forms.Button btnAjoutCarte;
-        private System.Windows.Forms.Button btnCancel;
     }
 }

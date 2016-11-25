@@ -17,13 +17,5 @@ namespace MiniTrello.View
         {
             InitializeComponent();
         }
-
-        private void btnAjoutCarte_Click(object sender, EventArgs e)
-        {
-            Carte c = new Carte();
-            c.Titre = txtBoxTitreCarte.Text;
-            CtlCarte ctCarte = new CtlCarte();
-            
-        }
-    }
+            }
 }
