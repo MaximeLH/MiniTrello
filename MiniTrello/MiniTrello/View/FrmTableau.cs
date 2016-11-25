@@ -20,22 +20,22 @@ namespace MiniTrello
             InitializeComponent();
             using (var ctx = new MinitrelloDB())
             {
-                Tableau t = new Tableau { Titre = "Deuxième Tableau " };
-                Liste l = new Liste { Titre = "Liste l2" };
-                Model.Carte c = new Model.Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
-                Checklist ch = new Checklist { };
-                ElementChecklist e = new ElementChecklist { Etat = true, TextElt = "element de checklist n°1" };
+                //Tableau t = new Tableau { Titre = "Trosième Tableau " };
+                //Liste l = new Liste { Titre = "Liste l3" };
+                //Carte c = new Carte { Titre = "Carte c3", Description = "troisième carte créée" };
+                //Checklist ch = new Checklist { };
+                //ElementChecklist e = new ElementChecklist { Etat = true, TextElt = "element de checklist n°2" };
 
-                ch.CheckL = new List<ElementChecklist>();
-                ch.CheckL.Add(e);
-                c.Checklists = new List<Checklist>();
-                c.Checklists.Add(ch);
-                l.Cartes = new List<Model.Carte>();
-                l.Cartes.Add(c);
-                t.Listes = new List<Liste>();
-                t.Listes.Add(l);
-                ctx.Tableaux.Add(t);
-                ctx.SaveChanges();
+                //ch.CheckL = new List<ElementChecklist>();
+                //ch.CheckL.Add(e);
+                //c.Checklists = new List<Checklist>();
+                //c.Checklists.Add(ch);
+                //l.Cartes = new List<Carte>();
+                //l.Cartes.Add(c);
+                //t.Listes = new List<Liste>();
+                //t.Listes.Add(l);
+                //ctx.Tableaux.Add(t);
+                //ctx.SaveChanges();
             }
         }
 
