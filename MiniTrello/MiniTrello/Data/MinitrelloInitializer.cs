@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 
-namespace Minitrello.Models
+namespace MiniTrello.Data
 {
     public class MinitrelloInitializer : DropCreateDatabaseIfModelChanges<MinitrelloDB>
     {
@@ -27,23 +27,23 @@ namespace Minitrello.Models
         protected override void Seed(MinitrelloDB ctx)
         {
             base.Seed(ctx);
-            {
-                Tableau t = new Tableau {Titre="Premier Tableau !"};
-                Liste l = new Liste {Titre="Liste l"};
-                Carte c = new Carte { Titre = "Carte c1", Description="première carte créée" };
-                Checklist ch = new Checklist { };
-                ElementChecklist e = new ElementChecklist { Etat=true,TextElt="element de checklist n°1" };
+            //{
+            //    Tableau t = new Tableau {Titre="Premier Tableau !"};
+            //    Liste l = new Liste {Titre="Liste l"};
+            //    Carte c = new Carte { Titre = "Carte c1", Description="première carte créée" };
+            //    Checklist ch = new Checklist { };
+            //    ElementChecklist e = new ElementChecklist { Etat=true,TextElt="element de checklist n°1" };
 
-                ch.CheckL = new List<ElementChecklist>();
-                ch.CheckL.Add(e);
-                c.Checklists = new List<Checklist>();
-                c.Checklists.Add(ch);
-                l.Cartes = new List<Carte>();
-                l.Cartes.Add(c);
-                t.Listes = new List<Liste>();
-                t.Listes.Add(l);
-                ctx.Tableaux.Add(t);
-                ctx.SaveChanges();
+            //    ch.CheckL = new List<ElementChecklist>();
+            //    ch.CheckL.Add(e);
+            //    c.Checklists = new List<Checklist>();
+            //    c.Checklists.Add(ch);
+            //    l.Cartes = new List<Carte>();
+            //    l.Cartes.Add(c);
+            //    t.Listes = new List<Liste>();
+            //    t.Listes.Add(l);
+            //    ctx.Tableaux.Add(t);
+            //    ctx.SaveChanges();
 
             }
 

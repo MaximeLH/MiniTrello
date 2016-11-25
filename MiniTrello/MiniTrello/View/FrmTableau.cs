@@ -22,7 +22,7 @@ namespace MiniTrello
             {
                 Tableau t = new Tableau { Titre = "Deuxième Tableau " };
                 Liste l = new Liste { Titre = "Liste l2" };
-                Carte c = new Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
+                Model.Carte c = new Model.Carte { Titre = "Carte c2", Description = "deuxième carte créée" };
                 Checklist ch = new Checklist { };
                 ElementChecklist e = new ElementChecklist { Etat = true, TextElt = "element de checklist n°1" };
 
@@ -30,7 +30,7 @@ namespace MiniTrello
                 ch.CheckL.Add(e);
                 c.Checklists = new List<Checklist>();
                 c.Checklists.Add(ch);
-                l.Cartes = new List<Carte>();
+                l.Cartes = new List<Model.Carte>();
                 l.Cartes.Add(c);
                 t.Listes = new List<Liste>();
                 t.Listes.Add(l);
@@ -53,19 +53,21 @@ namespace MiniTrello
             pnlAjout.Controls.Add(ajout);
             pnlAjout.Controls.Add(annuler);
             ajout.Click += new EventHandler(ajout_Click);
+            annuler.Click += new EventHandler(annuler_Click);
         }
         private void ajout_Click(object sender, EventArgs e)
         {
-            CtrlListe c = new CtrlListe();
+            CtlListe c = new CtlListe();
             c.txtTitreListe.Text = txtAjout.Text;
             flnListe.Controls.Add(c);
             c.lblLeft.Click += (sender, e) => { lblLeft_Click(sender, e, c); };
                 //new EventHandler(lblLeft_Click(this, e, c));
         }
-
-        private void txtAjout_TextChanged(object sender, EventArgs e)
+        private void annuler_Click(object sender, EventArgs e)
         {
 
+            pnlAjout.Controls.Remove(txtAjout);
+           
         }
 
         private void lblLeft_Click(object sender, EventArgs e, CtrlListe c)

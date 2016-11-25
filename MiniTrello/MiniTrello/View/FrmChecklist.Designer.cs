@@ -46,17 +46,16 @@
             this.FlowLayoutPnlCheckList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.FlowLayoutPnlCheckList.Location = new System.Drawing.Point(25, 12);
             this.FlowLayoutPnlCheckList.Name = "FlowLayoutPnlCheckList";
-            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(458, 253);
+            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(449, 253);
             this.FlowLayoutPnlCheckList.TabIndex = 4;
             // 
             // FlowLayoutPnlCheckListElt
             // 
             this.FlowLayoutPnlCheckListElt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.FlowLayoutPnlCheckListElt.AutoScroll = true;
             this.FlowLayoutPnlCheckListElt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FlowLayoutPnlCheckListElt.Location = new System.Drawing.Point(3, 3);
             this.FlowLayoutPnlCheckListElt.Name = "FlowLayoutPnlCheckListElt";
-            this.FlowLayoutPnlCheckListElt.Size = new System.Drawing.Size(419, 212);
+            this.FlowLayoutPnlCheckListElt.Size = new System.Drawing.Size(387, 212);
             this.FlowLayoutPnlCheckListElt.TabIndex = 0;
             // 
             // LinkLblAddElement
@@ -77,7 +76,7 @@
             // RadioBtnCheckList
             // 
             this.RadioBtnCheckList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.RadioBtnCheckList.Location = new System.Drawing.Point(428, 3);
+            this.RadioBtnCheckList.Location = new System.Drawing.Point(396, 3);
             this.RadioBtnCheckList.Name = "RadioBtnCheckList";
             this.RadioBtnCheckList.Size = new System.Drawing.Size(30, 250);
             this.RadioBtnCheckList.TabIndex = 2;
@@ -89,8 +88,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(495, 277);
+            this.ClientSize = new System.Drawing.Size(526, 277);
             this.Controls.Add(this.FlowLayoutPnlCheckList);
+            this.MinimumSize = new System.Drawing.Size(542, 315);
             this.Name = "FrmChecklist";
             this.Text = "FrmChecklist";
             this.FlowLayoutPnlCheckList.ResumeLayout(false);

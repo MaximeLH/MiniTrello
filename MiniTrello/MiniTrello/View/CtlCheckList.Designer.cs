@@ -31,7 +31,8 @@
             this.FlowLayoutPnlCheckList = new System.Windows.Forms.FlowLayoutPanel();
             this.FlowLayoutPnlCheckListElt = new System.Windows.Forms.FlowLayoutPanel();
             this.LinkLblAddElement = new System.Windows.Forms.LinkLabel();
-            this.RadioBtnCheckList = new System.Windows.Forms.RadioButton();
+            this.LinkLblSupprElt = new System.Windows.Forms.LinkLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.FlowLayoutPnlCheckList.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,12 +41,13 @@
             this.FlowLayoutPnlCheckList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.FlowLayoutPnlCheckList.Controls.Add(this.FlowLayoutPnlCheckListElt);
             this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblAddElement);
-            this.FlowLayoutPnlCheckList.Controls.Add(this.RadioBtnCheckList);
+            this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblSupprElt);
+            this.FlowLayoutPnlCheckList.Controls.Add(this.checkBox1);
             this.FlowLayoutPnlCheckList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlowLayoutPnlCheckList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.FlowLayoutPnlCheckList.Location = new System.Drawing.Point(0, 0);
             this.FlowLayoutPnlCheckList.Name = "FlowLayoutPnlCheckList";
-            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(625, 111);
+            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(595, 111);
             this.FlowLayoutPnlCheckList.TabIndex = 5;
             // 
             // FlowLayoutPnlCheckListElt
@@ -72,14 +74,31 @@
             this.LinkLblAddElement.Text = "Ajouter un élement...";
             this.LinkLblAddElement.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblAddElement_LinkClicked);
             // 
-            // RadioBtnCheckList
+            // LinkLblSupprElt
             // 
-            this.RadioBtnCheckList.Location = new System.Drawing.Point(576, 3);
-            this.RadioBtnCheckList.Name = "RadioBtnCheckList";
-            this.RadioBtnCheckList.Size = new System.Drawing.Size(24, 108);
-            this.RadioBtnCheckList.TabIndex = 2;
-            this.RadioBtnCheckList.TabStop = true;
-            this.RadioBtnCheckList.UseVisualStyleBackColor = true;
+            this.LinkLblSupprElt.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.LinkLblSupprElt.AutoSize = true;
+            this.LinkLblSupprElt.BackColor = System.Drawing.Color.Transparent;
+            this.LinkLblSupprElt.Font = new System.Drawing.Font("OpenSymbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LinkLblSupprElt.LinkColor = System.Drawing.Color.Black;
+            this.LinkLblSupprElt.Location = new System.Drawing.Point(3, 91);
+            this.LinkLblSupprElt.Name = "LinkLblSupprElt";
+            this.LinkLblSupprElt.Size = new System.Drawing.Size(153, 16);
+            this.LinkLblSupprElt.TabIndex = 3;
+            this.LinkLblSupprElt.TabStop = true;
+            this.LinkLblSupprElt.Text = "Supprimer un élement...";
+            this.LinkLblSupprElt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblSupprElt_LinkClicked);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(576, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // CtlCheckList
             // 
@@ -87,7 +106,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.FlowLayoutPnlCheckList);
             this.Name = "CtlCheckList";
-            this.Size = new System.Drawing.Size(625, 111);
+            this.Size = new System.Drawing.Size(595, 111);
             this.FlowLayoutPnlCheckList.ResumeLayout(false);
             this.FlowLayoutPnlCheckList.PerformLayout();
             this.ResumeLayout(false);
@@ -99,6 +118,7 @@
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPnlCheckList;
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPnlCheckListElt;
         private System.Windows.Forms.LinkLabel LinkLblAddElement;
-        private System.Windows.Forms.RadioButton RadioBtnCheckList;
+        private System.Windows.Forms.LinkLabel LinkLblSupprElt;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

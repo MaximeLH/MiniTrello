@@ -79,15 +79,15 @@
     <Compile Include="View\CtlChecklistElement.Designer.cs">
       <DependentUpon>CtlChecklistElement.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormulaireCarte.cs">
+    <Compile Include="View\FrmCarte.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\Checklist.cs" />
-    <Compile Include="View\CtrlListe.cs">
+    <Compile Include="View\CtlListe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\CtrlListe.Designer.cs">
-      <DependentUpon>CtrlListe.cs</DependentUpon>
+    <Compile Include="View\CtlListe.Designer.cs">
+      <DependentUpon>CtlListe.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmChecklist.cs">
       <SubType>Form</SubType>
@@ -98,8 +98,8 @@
     <Compile Include="View\FrmTableau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormulaireCarte.Designer.cs">
-      <DependentUpon>FormulaireCarte.cs</DependentUpon>
+    <Compile Include="View\FrmCarte.Designer.cs">
+      <DependentUpon>FrmCarte.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FrmTableau.Designer.cs">
       <DependentUpon>FrmTableau.cs</DependentUpon>
@@ -129,8 +129,8 @@
     <Compile Include="View\FrmTestMoveCarte.Designer.cs">
       <DependentUpon>FrmTestMoveCarte.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\FormulaireCarte.resx">
-      <DependentUpon>FormulaireCarte.cs</DependentUpon>
+	<EmbeddedResource Include="View\FrmCarte.resx">
+      <DependentUpon>FrmCarte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,8 +141,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\CtrlListe.resx">
-      <DependentUpon>CtrlListe.cs</DependentUpon>
+    <EmbeddedResource Include="View\CtlListe.resx">
+      <DependentUpon>CtlListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FrmChecklist.resx">
       <DependentUpon>FrmChecklist.cs</DependentUpon>

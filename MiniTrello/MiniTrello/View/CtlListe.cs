@@ -11,9 +11,9 @@ using MiniTrello.Model;
 
 namespace MiniTrello.View
 {
-    public partial class CtrlListe : UserControl
+    public partial class CtlListe : UserControl
     {
-        public CtrlListe()
+        public CtlListe()
         {
             InitializeComponent();
         }
