@@ -1,4 +1,6 @@
-﻿namespace MiniTrello.View
+﻿using System.Windows.Forms;
+
+namespace MiniTrello.View
 {
     partial class CtlListe
     {
@@ -30,6 +32,7 @@
         {
             this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
+            this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
             this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddCarte = new System.Windows.Forms.Button();
             this.lblRight = new System.Windows.Forms.Label();
@@ -136,6 +139,7 @@
         #endregion
         private System.Windows.Forms.Button btnAddCarte;
         internal System.Windows.Forms.TextBox txtTitreListe;
+        public TextBox txtBoxTitreCarte;
         public System.Windows.Forms.FlowLayoutPanel flpCartes;
         private System.Windows.Forms.FlowLayoutPanel flnCarte;
         internal System.Windows.Forms.Label lblLeft;
