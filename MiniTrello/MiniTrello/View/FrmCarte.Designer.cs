@@ -47,6 +47,7 @@
             this.LblTitre.Size = new System.Drawing.Size(186, 27);
             this.LblTitre.TabIndex = 0;
             this.LblTitre.Text = "Ajouter un titre...";
+            this.LblTitre.TextChanged += new System.EventHandler(this.LblTitre_TextChanged);
             // 
             // LblSousTitre
             // 
@@ -116,7 +117,7 @@
             this.BtnSupprimer.UseVisualStyleBackColor = true;
             this.BtnSupprimer.Click += new System.EventHandler(this.BtnSupprimer_Click);
             // 
-            // Titre
+            // FrmCarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,7 +130,7 @@
             this.Controls.Add(this.TxtBoxDescription);
             this.Controls.Add(this.LblSousTitre);
             this.Controls.Add(this.LblTitre);
-            this.Name = "Titre";
+            this.Name = "FrmCarte";
             this.Text = "FormulaireCarte";
             this.Load += new System.EventHandler(this.FrmCarte_Load);
             this.ResumeLayout(false);

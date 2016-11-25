@@ -1,4 +1,5 @@
-﻿using MiniTrello.View;
+﻿using MiniTrello.Model;
+using MiniTrello.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace MiniTrello
 {
     public partial class FrmCarte : Form
     {
+        public Carte c;
         public FrmCarte()
         {
             InitializeComponent();
@@ -23,7 +25,6 @@ namespace MiniTrello
 
         private void FrmCarte_Load(object sender, EventArgs e)
         {
-
         }
 
         private void BtnAjouter_Click(object sender, EventArgs e)
@@ -43,6 +44,16 @@ namespace MiniTrello
         private void BtnSupprimer_Click(object sender, EventArgs e)
         {
             FlowLayoutPnlCheckLists.Controls.Remove(ctlSelected);
+        }
+
+        private void LblTitre_TextChanged(object sender, EventArgs e)
+        {
+            using (var ctx = new Data.MinitrelloDB())
+            {
+                Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
+                c2.Titre = LblTitre.Text;
+                ctx.SaveChanges();
+            }
         }
     }
 }

@@ -40,6 +40,7 @@
             this.lblTitreCarte.TabIndex = 0;
             this.lblTitreCarte.Text = "Titre de la carte";
             this.lblTitreCarte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitreCarte.Click += new System.EventHandler(this.lblTitreCarte_Click);
             this.lblTitreCarte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CtlCarte_MouseClick);
             // 
             // CtlCarte
