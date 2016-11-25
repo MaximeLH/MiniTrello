@@ -35,19 +35,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // FlowLayoutPnlCheckList
-            // 
-            this.FlowLayoutPnlCheckList.Controls.Add(this.FlowLayoutPnlCheckListElt);
-            this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblAddElement);
-            this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblSupprElt);
-            this.FlowLayoutPnlCheckList.Controls.Add(this.checkBox1);
-            this.FlowLayoutPnlCheckList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowLayoutPnlCheckList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.FlowLayoutPnlCheckList.Location = new System.Drawing.Point(0, 0);
-            this.FlowLayoutPnlCheckList.Name = "FlowLayoutPnlCheckList";
-            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(595, 111);
-            this.FlowLayoutPnlCheckList.TabIndex = 5;
-            // 
             // FlowLayoutPnlCheckListElt
             // 
             this.FlowLayoutPnlCheckListElt.AutoScroll = true;
@@ -56,6 +43,15 @@
             this.FlowLayoutPnlCheckListElt.Name = "FlowLayoutPnlCheckListElt";
             this.FlowLayoutPnlCheckListElt.Size = new System.Drawing.Size(567, 69);
             this.FlowLayoutPnlCheckListElt.TabIndex = 5;
+            // 
+            // FlowLayoutPnlCheckList
+            // 
+            this.FlowLayoutPnlCheckList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowLayoutPnlCheckList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FlowLayoutPnlCheckList.Location = new System.Drawing.Point(0, 0);
+            this.FlowLayoutPnlCheckList.Name = "FlowLayoutPnlCheckList";
+            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(595, 111);
+            this.FlowLayoutPnlCheckList.TabIndex = 5;
             // 
             // LinkLblAddElement
             // 
@@ -70,7 +66,7 @@
             this.LinkLblAddElement.TabIndex = 6;
             this.LinkLblAddElement.TabStop = true;
             this.LinkLblAddElement.Text = "Ajouter un élement...";
-//            this.LinkLblAddElement.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblAddElement_LinkClicked_1);
+            this.LinkLblAddElement.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblAddElement_LinkClicked);
             // 
             // LinkLblSupprElt
             // 
@@ -79,18 +75,18 @@
             this.LinkLblSupprElt.BackColor = System.Drawing.Color.Transparent;
             this.LinkLblSupprElt.Font = new System.Drawing.Font("OpenSymbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LinkLblSupprElt.LinkColor = System.Drawing.Color.Black;
-            this.LinkLblSupprElt.Location = new System.Drawing.Point(142, 75);
+            this.LinkLblSupprElt.Location = new System.Drawing.Point(3, 91);
             this.LinkLblSupprElt.Name = "LinkLblSupprElt";
             this.LinkLblSupprElt.Size = new System.Drawing.Size(153, 16);
             this.LinkLblSupprElt.TabIndex = 7;
             this.LinkLblSupprElt.TabStop = true;
             this.LinkLblSupprElt.Text = "Supprimer un élement...";
-//            this.LinkLblSupprElt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblSupprElt_LinkClicked_1);
+            this.LinkLblSupprElt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblSupprElt_LinkClicked);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(576, 30);
+            this.checkBox1.Location = new System.Drawing.Point(576, 3);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 8;
@@ -106,7 +102,7 @@
             this.Controls.Add(this.LinkLblSupprElt);
             this.Controls.Add(this.checkBox1);
             this.Name = "CtlCheckList";
-            this.Size = new System.Drawing.Size(600, 99);
+            this.Size = new System.Drawing.Size(600, 117);
             this.ResumeLayout(false);
             this.PerformLayout();
 
