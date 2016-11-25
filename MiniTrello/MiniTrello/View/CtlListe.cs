@@ -20,10 +20,15 @@ namespace MiniTrello.View
         public void btnAddCarte_Click(object sender, EventArgs e)
         {
             CtlCarte ctCarte = new CtlCarte();
-            flpCartes.Controls.Add(ctCarte);         
+            flpCartes.Controls.Add(ctCarte);
 
         }
 
-     
+        public event EventHandler SupprimeMoi;
+
+        private void btnSuppListe_Click(object sender, EventArgs e)
+        {
+            SupprimeMoi?.Invoke(this, null);
+        }
     }
 }

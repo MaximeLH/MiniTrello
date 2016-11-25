@@ -52,6 +52,14 @@ namespace MiniTrello
             PremiereConfig();
             c.lblLeft.Click += delegate (object s, EventArgs ev) { lblLeft_Click(sender, e, c); };
             c.lblRight.Click += delegate (object s, EventArgs ev) { lblRight_Click(sender, e, c); };
+
+            c.SupprimeMoi += delegate (object s, EventArgs ev) { C_SupprimeMoi(sender, e, c); };
+
+        }
+
+        private void C_SupprimeMoi(object sender, EventArgs e, CtlListe c)
+        {
+            flnListe.Controls.Remove(c);
         }
 
         private void lblLeft_Click(object sender, EventArgs e, CtlListe c)
