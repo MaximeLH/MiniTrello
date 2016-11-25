@@ -23,9 +23,17 @@ namespace MiniTrello.View
         }
         public event EventHandler Selected;
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox1.Checked)
+            {
+            Selected?.Invoke(this, e);
+            }
+            else
+            {
             Selected?.Invoke(null, e);
+            }
+
         }
     }
 }
