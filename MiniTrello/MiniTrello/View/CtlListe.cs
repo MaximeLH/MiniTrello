@@ -28,16 +28,22 @@ namespace MiniTrello.View
                 ctx.SaveChanges();
                 ctCarte.Tag = c;
                 ctCarte.Init();
+                ctCarte.SupprimeMoi += CtCarte_SupprimeMoi;
             }
             flpCartes.Controls.Add(ctCarte);
 
         }
 
-        public event EventHandler SupprimeMoi;
+        private void CtCarte_SupprimeMoi(object sender, CtlCarte e)
+        {
+            flpCartes.Controls.Remove(e);
+        }
+
+        public event EventHandler<CtlListe> SupprimeMoi;
 
         private void btnSuppListe_Click(object sender, EventArgs e)
         {
-            SupprimeMoi?.Invoke(this, null);
+            SupprimeMoi?.Invoke(this, this);
         }
     }
 }
