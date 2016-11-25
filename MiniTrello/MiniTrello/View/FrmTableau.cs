@@ -53,13 +53,12 @@ namespace MiniTrello
             c.MoveLeft += delegate (object s, EventArgs ev) { C_MoveLeft(sender, e, c); };
             c.MoveRight += delegate (object s, EventArgs ev) { C_MoveRight(sender, e, c); };
 
-            c.SupprimeMoi += delegate (object s, EventArgs ev) { C_SupprimeMoi(sender, e, c); };
-
+            c.SupprimeMoi += C_SupprimeMoi;
         }
 
-        private void C_SupprimeMoi(object sender, EventArgs e, CtlListe c)
+        private void C_SupprimeMoi(object sender, CtlListe e)
         {
-            flnListe.Controls.Remove(c);
+            flnListe.Controls.Remove(e);
         }
 
         private void C_MoveLeft(object sender, EventArgs e, CtlListe c)
