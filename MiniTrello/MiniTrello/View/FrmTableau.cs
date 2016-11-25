@@ -36,36 +36,42 @@ namespace MiniTrello
                 t.Listes.Add(l);
                 ctx.Tableaux.Add(t);
                 ctx.SaveChanges();
+
+                PremiereConfig();
+                
             }
         }
 
-        private void textBox1_Click(object sender, EventArgs e)
+        public void btnAjoutListe_Click(object sender, EventArgs e)
         {
-            txtAjout.BackColor = Color.White;
-            txtAjout.BorderStyle = BorderStyle.Fixed3D;
-            txtAjout.Text = "";
-            Button ajout = new Button();
-            ajout.Text = "Enregistrer";
-            ajout.BackColor = Color.LimeGreen;
-            Button annuler = new Button();
-            annuler.Text = "X";
-            annuler.Width = 50;
-            pnlAjout.Controls.Add(ajout);
-            pnlAjout.Controls.Add(annuler);
-            ajout.Click += new EventHandler(ajout_Click);
-            annuler.Click += new EventHandler(annuler_Click);
+            DeuxiemeConfig();
         }
-        private void ajout_Click(object sender, EventArgs e)
+        public void PremiereConfig()
+        {
+            btnAjoutListe.Visible = true;
+            txtTitreListe.Visible = false;
+            btnEnregistrerListe.Visible = false;
+            btnSuppListe.Visible = false;
+        }
+        public void DeuxiemeConfig()
+        {
+            btnAjoutListe.Visible = false;
+            txtTitreListe.Visible = true;
+            btnEnregistrerListe.Visible = true;
+            btnSuppListe.Visible = true;
+        }
+
+        private void btnEnregistrerListe_Click(object sender, EventArgs e)
         {
             CtrlListe c = new CtrlListe();
-            c.txtTitreListe.Text = txtAjout.Text;
+            c.txtTitreListe.Text = txtTitreListe.Text;
             flnListe.Controls.Add(c);
+            PremiereConfig();
         }
-        private void annuler_Click(object sender, EventArgs e)
-        {
 
-            pnlAjout.Controls.Remove(txtAjout);
-           
+        private void btnSuppListe_Click(object sender, EventArgs e)
+        {
+            PremiereConfig();
         }
     }
 }
