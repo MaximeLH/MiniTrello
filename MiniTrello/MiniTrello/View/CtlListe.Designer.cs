@@ -134,6 +134,7 @@ namespace MiniTrello.View
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
         }
 
         #endregion
