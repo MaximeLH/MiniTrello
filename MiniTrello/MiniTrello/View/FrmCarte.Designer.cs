@@ -68,6 +68,7 @@
             this.TxtBoxDescription.Name = "TxtBoxDescription";
             this.TxtBoxDescription.Size = new System.Drawing.Size(662, 49);
             this.TxtBoxDescription.TabIndex = 2;
+            this.TxtBoxDescription.TextChanged += new System.EventHandler(this.TxtBoxDescription_TextChanged);
             // 
             // LblCheckList
             // 

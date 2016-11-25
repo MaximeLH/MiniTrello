@@ -13,11 +13,17 @@ namespace MiniTrello.View
 {
     public partial class CtlCarte : UserControl
     {
-        public Carte c;
     public CtlCarte()
         {
+            var ctx = new Data.MinitrelloDB();
             InitializeComponent();
-            
+
+        }
+
+        public void Init()
+        {
+            Carte c = (Carte)this.Tag;
+            lblTitreCarte.Text = c.Titre;
         }
 
         private void CtlCarte_Click(object sender, EventArgs e)
@@ -31,7 +37,7 @@ namespace MiniTrello.View
         private void lblTitreCarte_Click(object sender, EventArgs e)
         {
             FrmCarte t = new MiniTrello.FrmCarte();
-            t.c = c;
+            t.Tag = this.Tag;
             t.ShowDialog();
         }
     }

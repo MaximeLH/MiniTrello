@@ -32,6 +32,7 @@
             this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddCarte = new System.Windows.Forms.Button();
+            this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
             this.flnCarte.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             this.flnCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flnCarte.Controls.Add(this.txtTitreListe);
             this.flnCarte.Controls.Add(this.flpCartes);
+            this.flnCarte.Controls.Add(this.txtBoxTitreCarte);
             this.flnCarte.Controls.Add(this.btnAddCarte);
             this.flnCarte.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flnCarte.Location = new System.Drawing.Point(3, 3);
@@ -70,7 +72,7 @@
             // btnAddCarte
             // 
             this.btnAddCarte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddCarte.Location = new System.Drawing.Point(4, 35);
+            this.btnAddCarte.Location = new System.Drawing.Point(4, 61);
             this.btnAddCarte.Name = "btnAddCarte";
             this.btnAddCarte.Size = new System.Drawing.Size(216, 23);
             this.btnAddCarte.TabIndex = 1;
@@ -78,13 +80,20 @@
             this.btnAddCarte.UseVisualStyleBackColor = true;
             this.btnAddCarte.Click += new System.EventHandler(this.btnAddCarte_Click);
             // 
-            // CtrlListe
+            // txtBoxTitreCarte
+            // 
+            this.txtBoxTitreCarte.Location = new System.Drawing.Point(3, 35);
+            this.txtBoxTitreCarte.Name = "txtBoxTitreCarte";
+            this.txtBoxTitreCarte.Size = new System.Drawing.Size(217, 20);
+            this.txtBoxTitreCarte.TabIndex = 5;
+            // 
+            // CtlListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.flnCarte);
-            this.Name = "CtrlListe";
+            this.Name = "CtlListe";
             this.Size = new System.Drawing.Size(251, 113);
             this.flnCarte.ResumeLayout(false);
             this.flnCarte.PerformLayout();
@@ -99,5 +108,6 @@
         private System.Windows.Forms.Button btnAddCarte;
         internal System.Windows.Forms.TextBox txtTitreListe;
         public System.Windows.Forms.FlowLayoutPanel flpCartes;
+        private System.Windows.Forms.TextBox txtBoxTitreCarte;
     }
 }

@@ -1,4 +1,5 @@
-﻿using MiniTrello.Model;
+﻿using MiniTrello.Data;
+using MiniTrello.Model;
 using MiniTrello.View;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace MiniTrello
 {
     public partial class FrmCarte : Form
     {
-        public Carte c;
+        public MinitrelloDB ctx;
         public FrmCarte()
         {
             InitializeComponent();
@@ -25,6 +26,10 @@ namespace MiniTrello
 
         private void FrmCarte_Load(object sender, EventArgs e)
         {
+            Carte carte = (Carte)this.Tag;
+            LblTitre.Text = carte.Titre;
+            TxtBoxDescription.Text= carte.Description ;
+
         }
 
         private void BtnAjouter_Click(object sender, EventArgs e)
@@ -48,12 +53,16 @@ namespace MiniTrello
 
         private void LblTitre_TextChanged(object sender, EventArgs e)
         {
-            using (var ctx = new Data.MinitrelloDB())
-            {
-                Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
-                c2.Titre = LblTitre.Text;
-                ctx.SaveChanges();
-            }
+                //Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
+                //c2.Titre = LblTitre.Text;
+                //ctx.SaveChanges();
+        }
+
+        private void TxtBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+                //Carte carte = (Carte)this.Tag;
+                //carte.Description = TxtBoxDescription.Text;
+                //ctx.SaveChanges();
         }
     }
 }

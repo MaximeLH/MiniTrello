@@ -1,4 +1,6 @@
-﻿namespace MiniTrello.View
+﻿using MiniTrello.Model;
+
+namespace MiniTrello.View
 {
     partial class CtlCarte
     {
@@ -33,12 +35,14 @@
             // 
             // lblTitreCarte
             // 
+            this.lblTitreCarte.BackColor = System.Drawing.Color.Gainsboro;
+            this.lblTitreCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTitreCarte.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitreCarte.Location = new System.Drawing.Point(0, 0);
             this.lblTitreCarte.Name = "lblTitreCarte";
             this.lblTitreCarte.Size = new System.Drawing.Size(147, 22);
             this.lblTitreCarte.TabIndex = 0;
-            this.lblTitreCarte.Text = "Titre de la carte";
+            this.lblTitreCarte.Text = "" ;
             this.lblTitreCarte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitreCarte.Click += new System.EventHandler(this.lblTitreCarte_Click);
             this.lblTitreCarte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CtlCarte_MouseClick);
