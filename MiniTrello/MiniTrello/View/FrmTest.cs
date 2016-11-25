@@ -20,7 +20,7 @@ namespace MiniTrello.View
 
         private void btnAddCarte_Click(object sender, EventArgs e)
         {
-            Carte carte = new Carte();
+            Model.Carte carte = new Model.Carte();
             carte.Titre = txtCarte.Text;
             TextBox txtBox = new TextBox();
             txtBox.Text = txtCarte.Text;

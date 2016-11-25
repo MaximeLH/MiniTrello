@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTableau));
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.flnListe = new System.Windows.Forms.FlowLayoutPanel();
             this.lblTitreTableau = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnResetDB = new System.Windows.Forms.ToolStripButton();
+            this.pnlAjout.SuspendLayout();
             this.btnSuppListe = new System.Windows.Forms.Button();
             this.btnEnregistrerListe = new System.Windows.Forms.Button();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.btnAjoutListe = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // hScrollBar1
@@ -130,12 +135,33 @@
             this.btnAjoutListe.UseVisualStyleBackColor = true;
             this.btnAjoutListe.Click += new System.EventHandler(this.btnAjoutListe_Click);
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BtnResetDB});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(953, 25);
+            this.toolStrip1.TabIndex = 10;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // BtnResetDB
+            // 
+            this.BtnResetDB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.BtnResetDB.Image = ((System.Drawing.Image)(resources.GetObject("BtnResetDB.Image")));
+            this.BtnResetDB.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnResetDB.Name = "BtnResetDB";
+            this.BtnResetDB.Size = new System.Drawing.Size(105, 22);
+            this.BtnResetDB.Text = "Reset/Initialize DB";
+            this.BtnResetDB.Click += new System.EventHandler(this.BtnResetDB_Click);
+            // 
             // FrmTableau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(953, 493);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitreTableau);
             this.Controls.Add(this.vScrollBar1);
@@ -144,7 +170,10 @@
             this.Text = "FrmTableau";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -155,6 +184,8 @@
         private System.Windows.Forms.Label lblTitreTableau;
         private System.Windows.Forms.VScrollBar vScrollBar1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton BtnResetDB;
         private System.Windows.Forms.Button btnAjoutListe;
         private System.Windows.Forms.TextBox txtTitreListe;
         private System.Windows.Forms.Button btnSuppListe;

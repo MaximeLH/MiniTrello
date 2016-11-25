@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MiniTrello
 {
-    public partial class Titre : Form
+    public partial class FrmCarte : Form
     {
-        public Titre()
+        public FrmCarte()
         {
             InitializeComponent();
             LblTitre.Name = "";
@@ -21,7 +21,7 @@ namespace MiniTrello
             
         }
 
-        private void FormulaireCarte_Load(object sender, EventArgs e)
+        private void FrmCarte_Load(object sender, EventArgs e)
         {
 
         }
@@ -29,7 +29,20 @@ namespace MiniTrello
         private void BtnAjouter_Click(object sender, EventArgs e)
         {
             CtlCheckList c1 = new CtlCheckList();
+            c1.Selected += C1_Selected;
             FlowLayoutPnlCheckLists.Controls.Add(c1);
+        }
+
+        public CtlCheckList ctlSelected;
+
+        private void C1_Selected(object sender, EventArgs e)
+        {
+            ctlSelected = (CtlCheckList) sender;
+        }
+
+        private void BtnSupprimer_Click(object sender, EventArgs e)
+        {
+            FlowLayoutPnlCheckLists.Controls.Remove(ctlSelected);
         }
     }
 }
