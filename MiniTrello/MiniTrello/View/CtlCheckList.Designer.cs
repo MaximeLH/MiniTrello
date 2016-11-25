@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.FlowLayoutPnlCheckListElt = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowLayoutPnlCheckList = new System.Windows.Forms.FlowLayoutPanel();
             this.LinkLblAddElement = new System.Windows.Forms.LinkLabel();
             this.LinkLblSupprElt = new System.Windows.Forms.LinkLabel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -36,7 +37,6 @@
             // 
             // FlowLayoutPnlCheckList
             // 
-            this.FlowLayoutPnlCheckList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.FlowLayoutPnlCheckList.Controls.Add(this.FlowLayoutPnlCheckListElt);
             this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblAddElement);
             this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblSupprElt);
@@ -70,7 +70,7 @@
             this.LinkLblAddElement.TabIndex = 6;
             this.LinkLblAddElement.TabStop = true;
             this.LinkLblAddElement.Text = "Ajouter un élement...";
-            this.LinkLblAddElement.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblAddElement_LinkClicked_1);
+//            this.LinkLblAddElement.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblAddElement_LinkClicked_1);
             // 
             // LinkLblSupprElt
             // 
@@ -85,7 +85,7 @@
             this.LinkLblSupprElt.TabIndex = 7;
             this.LinkLblSupprElt.TabStop = true;
             this.LinkLblSupprElt.Text = "Supprimer un élement...";
-            this.LinkLblSupprElt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblSupprElt_LinkClicked_1);
+//            this.LinkLblSupprElt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLblSupprElt_LinkClicked_1);
             // 
             // checkBox1
             // 
@@ -115,6 +115,7 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel FlowLayoutPnlCheckListElt;
+        private System.Windows.Forms.FlowLayoutPanel FlowLayoutPnlCheckList;
         private System.Windows.Forms.LinkLabel LinkLblAddElement;
         private System.Windows.Forms.LinkLabel LinkLblSupprElt;
         private System.Windows.Forms.CheckBox checkBox1;
