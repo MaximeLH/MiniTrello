@@ -27,13 +27,13 @@ namespace MiniTrello.View
         {
             if (checkBox1.Checked)
             {
-            Selected?.Invoke(this, e);
+                Selected?.Invoke(this, e);
             }
             else
             {
-            Selected?.Invoke(null, e);
+                Selected?.Invoke(null, e);
             }
-
+            
         }
     }
 }

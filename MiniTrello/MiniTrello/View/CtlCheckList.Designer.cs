@@ -34,6 +34,20 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
+            // FlowLayoutPnlCheckList
+            // 
+            this.FlowLayoutPnlCheckList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.FlowLayoutPnlCheckList.Controls.Add(this.FlowLayoutPnlCheckListElt);
+            this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblAddElement);
+            this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblSupprElt);
+            this.FlowLayoutPnlCheckList.Controls.Add(this.checkBox1);
+            this.FlowLayoutPnlCheckList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowLayoutPnlCheckList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.FlowLayoutPnlCheckList.Location = new System.Drawing.Point(0, 0);
+            this.FlowLayoutPnlCheckList.Name = "FlowLayoutPnlCheckList";
+            this.FlowLayoutPnlCheckList.Size = new System.Drawing.Size(595, 111);
+            this.FlowLayoutPnlCheckList.TabIndex = 5;
+            // 
             // FlowLayoutPnlCheckListElt
             // 
             this.FlowLayoutPnlCheckListElt.AutoScroll = true;
