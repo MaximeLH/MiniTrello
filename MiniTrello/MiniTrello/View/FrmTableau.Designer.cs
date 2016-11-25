@@ -36,7 +36,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnResetDB = new System.Windows.Forms.ToolStripButton();
-            this.pnlAjout.SuspendLayout();
+            //this.pnlAjout.SuspendLayout();
             this.btnSuppListe = new System.Windows.Forms.Button();
             this.btnEnregistrerListe = new System.Windows.Forms.Button();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
