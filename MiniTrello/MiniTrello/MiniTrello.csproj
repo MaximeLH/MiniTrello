@@ -61,6 +61,12 @@
     <Compile Include="Data\MinitrelloDB.cs" />
     <Compile Include="Model\Carte.cs" />
     <Compile Include="Model\ElementChecklist.cs" />
+    <Compile Include="View\CtlAjoutCarte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CtlAjoutCarte.Designer.cs">
+      <DependentUpon>CtlAjoutCarte.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CtlCarte.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     <Compile Include="View\FrmTest.Designer.cs">
       <DependentUpon>FrmTest.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CtlAjoutCarte.resx">
+      <DependentUpon>CtlAjoutCarte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CtlCarte.resx">
       <DependentUpon>CtlCarte.cs</DependentUpon>
     </EmbeddedResource>
