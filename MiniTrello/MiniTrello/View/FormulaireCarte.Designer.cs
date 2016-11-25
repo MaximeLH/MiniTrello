@@ -39,7 +39,8 @@
             // 
             // LblTitre
             // 
-            this.LblTitre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LblTitre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTitre.AutoSize = true;
             this.LblTitre.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTitre.Location = new System.Drawing.Point(257, 9);
@@ -50,6 +51,7 @@
             // 
             // LblSousTitre
             // 
+            this.LblSousTitre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblSousTitre.AutoSize = true;
             this.LblSousTitre.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblSousTitre.ForeColor = System.Drawing.Color.Navy;
@@ -61,6 +63,8 @@
             // 
             // TxtBoxDescription
             // 
+            this.TxtBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtBoxDescription.Location = new System.Drawing.Point(25, 69);
             this.TxtBoxDescription.Multiline = true;
@@ -70,10 +74,11 @@
             // 
             // LblCheckList
             // 
-            this.LblCheckList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.LblCheckList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LblCheckList.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblCheckList.ForeColor = System.Drawing.Color.Black;
-            this.LblCheckList.Location = new System.Drawing.Point(306, 158);
+            this.LblCheckList.Location = new System.Drawing.Point(310, 158);
             this.LblCheckList.Margin = new System.Windows.Forms.Padding(3, 8, 0, 0);
             this.LblCheckList.Name = "LblCheckList";
             this.LblCheckList.Size = new System.Drawing.Size(100, 31);
@@ -82,19 +87,23 @@
             // 
             // FlowLayoutPnlCheckLists
             // 
+            this.FlowLayoutPnlCheckLists.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FlowLayoutPnlCheckLists.AutoScroll = true;
             this.FlowLayoutPnlCheckLists.Location = new System.Drawing.Point(41, 189);
             this.FlowLayoutPnlCheckLists.Name = "FlowLayoutPnlCheckLists";
-            this.FlowLayoutPnlCheckLists.Size = new System.Drawing.Size(628, 123);
+            this.FlowLayoutPnlCheckLists.Size = new System.Drawing.Size(628, 215);
             this.FlowLayoutPnlCheckLists.TabIndex = 4;
             // 
             // BtnAjouter
             // 
+            this.BtnAjouter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.BtnAjouter.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnAjouter.FlatAppearance.BorderSize = 0;
             this.BtnAjouter.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAjouter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnAjouter.Location = new System.Drawing.Point(235, 329);
+            this.BtnAjouter.Location = new System.Drawing.Point(235, 421);
             this.BtnAjouter.Name = "BtnAjouter";
             this.BtnAjouter.Size = new System.Drawing.Size(96, 33);
             this.BtnAjouter.TabIndex = 5;
@@ -104,11 +113,12 @@
             // 
             // BtnSupprimer
             // 
+            this.BtnSupprimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnSupprimer.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnSupprimer.FlatAppearance.BorderSize = 0;
             this.BtnSupprimer.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSupprimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BtnSupprimer.Location = new System.Drawing.Point(415, 329);
+            this.BtnSupprimer.Location = new System.Drawing.Point(415, 421);
             this.BtnSupprimer.Name = "BtnSupprimer";
             this.BtnSupprimer.Size = new System.Drawing.Size(96, 33);
             this.BtnSupprimer.TabIndex = 6;
@@ -121,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(709, 410);
+            this.ClientSize = new System.Drawing.Size(717, 502);
             this.Controls.Add(this.BtnSupprimer);
             this.Controls.Add(this.BtnAjouter);
             this.Controls.Add(this.FlowLayoutPnlCheckLists);
