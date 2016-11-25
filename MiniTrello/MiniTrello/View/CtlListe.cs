@@ -32,16 +32,73 @@ namespace MiniTrello.View
                 ctCarte.Tag = c;
                 ctx.SaveChanges();
                 ctCarte.Init();
+                ctCarte.SupprimeMoi += CtCarte_SupprimeMoi;
             }
             flpCartes.Controls.Add(ctCarte);
-
+            ctCarte.MoveUp += delegate (object s, EventArgs ev) { lblUp_Click(sender, e, ctCarte); };
+            ctCarte.MoveDown += delegate (object s, EventArgs ev) { lblDown_Click(sender, e, ctCarte); };
         }
 
-        public event EventHandler SupprimeMoi;
+        private void CtCarte_SupprimeMoi(object sender, CtlCarte e)
+        {
+            flpCartes.Controls.Remove(e);
+        }
+
+        public event EventHandler<CtlListe> SupprimeMoi;
 
         private void btnSuppListe_Click(object sender, EventArgs e)
         {
-            SupprimeMoi?.Invoke(this, null);
+            SupprimeMoi?.Invoke(this, this);
+        }
+
+        public event EventHandler MoveLeft;
+
+        private void lblLeft_Click(object sender, EventArgs e)
+        {
+            MoveLeft?.Invoke(this, null);
+        }
+
+        public event EventHandler MoveRight;
+
+        private void lblRight_Click(object sender, EventArgs e)
+        {
+            MoveRight?.Invoke(this, null);
+        }
+
+        private void lblUp_Click(object sender, EventArgs e, CtlCarte c)
+        {
+            var alphaIndex = flpCartes.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flpCartes.Controls)
+            {
+                if (flpCartes.Controls.IndexOf(ctrl) == alphaIndex - 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flpCartes.Controls.SetChildIndex(c, alphaIndex - 1);
+                flpCartes.Controls.SetChildIndex(control, alphaIndex);
+            }
+        }
+
+        private void lblDown_Click(object sender, EventArgs e, CtlCarte c)
+        {
+            var alphaIndex = flpCartes.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flpCartes.Controls)
+            {
+                if (flpCartes.Controls.IndexOf(ctrl) == alphaIndex + 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flpCartes.Controls.SetChildIndex(c, alphaIndex + 1);
+                flpCartes.Controls.SetChildIndex(control, alphaIndex);
+            }
         }
 
         public void InitCartes()

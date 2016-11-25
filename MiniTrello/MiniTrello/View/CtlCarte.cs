@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiniTrello.Model;
+using MiniTrello;
 
 namespace MiniTrello.View
 {
@@ -39,6 +40,29 @@ namespace MiniTrello.View
             FrmCarte t = new MiniTrello.FrmCarte();
             t.Tag = this.Tag;
             t.ShowDialog();
+        }
+
+
+        public event EventHandler<CtlCarte> SupprimeMoi;
+
+        private void btnSupCarteListe_Click(object sender, EventArgs e)
+        {
+            SupprimeMoi?.Invoke(this, this);
+        }
+
+
+        public event EventHandler MoveUp;
+
+        private void lblUp_Click(object sender, EventArgs e)
+        {
+            MoveUp?.Invoke(this, null);
+        }
+
+        public event EventHandler MoveDown;
+
+        private void lblDown_Click(object sender, EventArgs e)
+        {
+            MoveDown?.Invoke(this, null);
         }
     }
 }

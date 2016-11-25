@@ -31,13 +31,10 @@ namespace MiniTrello.View
         private void InitializeComponent()
         {
             this.lblTitreCarte = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblLeft = new System.Windows.Forms.Label();
-            this.lblRight = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblUp = new System.Windows.Forms.Label();
             this.lblDown = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.btnSupCarteListe = new System.Windows.Forms.Button();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,35 +48,6 @@ namespace MiniTrello.View
             this.lblTitreCarte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitreCarte.Click += new System.EventHandler(this.lblTitreCarte_Click);
             this.lblTitreCarte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CtlCarte_MouseClick);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.lblLeft);
-            this.flowLayoutPanel1.Controls.Add(this.lblRight);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(111, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(65, 20);
-            this.flowLayoutPanel1.TabIndex = 6;
-            // 
-            // lblLeft
-            // 
-            this.lblLeft.AutoSize = true;
-            this.lblLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLeft.Location = new System.Drawing.Point(3, 0);
-            this.lblLeft.Name = "lblLeft";
-            this.lblLeft.Size = new System.Drawing.Size(26, 16);
-            this.lblLeft.TabIndex = 18;
-            this.lblLeft.Text = "<--";
-            // 
-            // lblRight
-            // 
-            this.lblRight.AutoSize = true;
-            this.lblRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRight.Location = new System.Drawing.Point(35, 0);
-            this.lblRight.Name = "lblRight";
-            this.lblRight.Size = new System.Drawing.Size(26, 16);
-            this.lblRight.TabIndex = 17;
-            this.lblRight.Text = "-->";
             // 
             // flowLayoutPanel2
             // 
@@ -104,6 +72,7 @@ namespace MiniTrello.View
             this.lblUp.TabIndex = 17;
             this.lblUp.Text = "Up";
             this.lblUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUp.Click += new System.EventHandler(this.lblUp_Click);
             // 
             // lblDown
             // 
@@ -119,6 +88,19 @@ namespace MiniTrello.View
             this.lblDown.TabIndex = 18;
             this.lblDown.Text = "Down";
             this.lblDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDown.Click += new System.EventHandler(this.lblDown_Click);
+            // 
+            // btnSupCarteListe
+            // 
+            this.btnSupCarteListe.BackColor = System.Drawing.Color.Red;
+            this.btnSupCarteListe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSupCarteListe.Location = new System.Drawing.Point(137, 37);
+            this.btnSupCarteListe.Name = "btnSupCarteListe";
+            this.btnSupCarteListe.Size = new System.Drawing.Size(35, 19);
+            this.btnSupCarteListe.TabIndex = 21;
+            this.btnSupCarteListe.Text = "X";
+            this.btnSupCarteListe.UseVisualStyleBackColor = false;
+            this.btnSupCarteListe.Click += new System.EventHandler(this.btnSupCarteListe_Click);
             // 
             // CtlCarte
             // 
@@ -127,7 +109,6 @@ namespace MiniTrello.View
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblTitreCarte);
             this.Name = "CtlCarte";
             this.Size = new System.Drawing.Size(174, 57);
@@ -142,11 +123,9 @@ namespace MiniTrello.View
         #endregion
 
         private System.Windows.Forms.Label lblTitreCarte;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        internal System.Windows.Forms.Label lblLeft;
-        internal System.Windows.Forms.Label lblRight;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label lblUp;
-        private System.Windows.Forms.Label lblDown;
+        internal System.Windows.Forms.Label lblUp;
+        internal System.Windows.Forms.Label lblDown;
+        private System.Windows.Forms.Button btnSupCarteListe;
     }
 }
