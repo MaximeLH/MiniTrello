@@ -1,4 +1,5 @@
-﻿using MiniTrello.Data;
+﻿using MiniTrello.Business;
+using MiniTrello.Data;
 using MiniTrello.Model;
 using MiniTrello.View;
 using System;
@@ -15,10 +16,13 @@ namespace MiniTrello
 {
     public partial class FrmCarte : Form
     {
-        public MinitrelloDB ctx;
+        public MainController ctlr;
+
         public FrmCarte()
         {
             InitializeComponent();
+            ctlr = MainController.instance;
+
             LblTitre.Name = "";
             LblSousTitre.Name = "Se trouve dans: " + "";
 
@@ -53,6 +57,7 @@ namespace MiniTrello
 
         private void LblTitre_TextChanged(object sender, EventArgs e)
         {
+            ctlr.MettreAjourCarte();
             //Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
             //c2.Titre = LblTitre.Text;
             //ctx.SaveChanges();
@@ -60,26 +65,27 @@ namespace MiniTrello
 
         private void TxtBoxDescription_TextChanged(object sender, EventArgs e)
         {
+            ctlr.MettreAjourCarte();
             //Carte carte = (Carte)this.Tag;
             //carte.Description = TxtBoxDescription.Text;
             //ctx.SaveChanges();
         }
 
-        private void btnEditDescription_Click(object sender, EventArgs e)
-        {
-                Init();
-         }
+        //private void btnEditDescription_Click(object sender, EventArgs e)
+        //{
+        //        Init();
+        // }
 
-        public void Init()
-        {
-            using (var ctx = new Data.MinitrelloDB())
-            {
-                Carte c = (Carte)this.Tag;
-                Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
-                c2.Description = TxtBoxDescription.Text;
-                ctx.SaveChanges();
-            }
-        }
+        //public void Init()
+        //{
+        //    using (var ctx = new Data.MinitrelloDB())
+        //    {
+        //        Carte c = (Carte)this.Tag;
+        //        Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
+        //        c2.Description = TxtBoxDescription.Text;
+        //        ctx.SaveChanges();
+        //    }
+        //}
 
         private void BtnAddCommentaire_Click(object sender, EventArgs e)
         {

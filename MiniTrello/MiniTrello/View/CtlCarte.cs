@@ -16,9 +16,7 @@ namespace MiniTrello.View
     {
     public CtlCarte()
         {
-            var ctx = new Data.MinitrelloDB();
             InitializeComponent();
-
         }
 
         public void Init()
@@ -51,18 +49,18 @@ namespace MiniTrello.View
         }
 
 
-        public event EventHandler MoveUp;
+        public event EventHandler<CtlCarte> MoveUp;
 
         private void lblUp_Click(object sender, EventArgs e)
         {
-            MoveUp?.Invoke(this, null);
+            MoveUp?.Invoke(this, this);
         }
 
-        public event EventHandler MoveDown;
+        public event EventHandler<CtlCarte> MoveDown;
 
         private void lblDown_Click(object sender, EventArgs e)
         {
-            MoveDown?.Invoke(this, null);
+            MoveDown?.Invoke(this, this);
         }
     }
 }

@@ -29,8 +29,6 @@ namespace MiniTrello.View {
             this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
             this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
-            this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
-            this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
             this.btnAddCarte = new System.Windows.Forms.Button();
             this.lblRight = new System.Windows.Forms.Label();
             this.lblLeft = new System.Windows.Forms.Label();
