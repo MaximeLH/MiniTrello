@@ -45,10 +45,9 @@ namespace MiniTrello.Data
             //    ctx.Tableaux.Add(t);
             //    ctx.SaveChanges();
 
-            }
-
-
-
         }
+
+
+
     }
 }

@@ -44,11 +44,13 @@
             this.lblRight = new System.Windows.Forms.Label();
             this.lblLeft = new System.Windows.Forms.Label();
             this.lblUp = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDown = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -57,9 +59,9 @@
             this.flowLayoutPanel2.Controls.Add(this.panel1);
             this.flowLayoutPanel2.Controls.Add(this.panel2);
             this.flowLayoutPanel2.Controls.Add(this.panel3);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(106, 78);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(47, 78);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(256, 345);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(358, 345);
             this.flowLayoutPanel2.TabIndex = 14;
             // 
             // panel1
@@ -209,39 +211,57 @@
             // 
             // lblUp
             // 
+            this.lblUp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUp.AutoSize = true;
             this.lblUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUp.Location = new System.Drawing.Point(411, 187);
+            this.lblUp.Location = new System.Drawing.Point(3, 0);
             this.lblUp.Name = "lblUp";
-            this.lblUp.Size = new System.Drawing.Size(25, 15);
+            this.lblUp.Size = new System.Drawing.Size(43, 15);
             this.lblUp.TabIndex = 17;
             this.lblUp.Text = "Up";
+            this.lblUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblUp.Click += new System.EventHandler(this.lblUp_Click);
             // 
-            // label3
+            // lblDown
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label3.Location = new System.Drawing.Point(411, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Down";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDown.AutoSize = true;
+            this.lblDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDown.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblDown.Location = new System.Drawing.Point(3, 15);
+            this.lblDown.Name = "lblDown";
+            this.lblDown.Size = new System.Drawing.Size(43, 15);
+            this.lblDown.TabIndex = 18;
+            this.lblDown.Text = "Down";
+            this.lblDown.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDown.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.lblUp);
+            this.flowLayoutPanel1.Controls.Add(this.lblDown);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(494, 168);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(51, 33);
+            this.flowLayoutPanel1.TabIndex = 19;
             // 
             // FrmTestMoveCarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 501);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblUp);
+            this.ClientSize = new System.Drawing.Size(740, 501);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblLeft);
             this.Controls.Add(this.lblRight);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Name = "FrmTestMoveCarte";
             this.Text = "FrmTestMoveCarte";
+            this.Load += new System.EventHandler(this.FrmTestMoveCarte_Load);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -249,6 +269,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,10 +290,11 @@
         private System.Windows.Forms.Label lblRight;
         private System.Windows.Forms.Label lblLeft;
         private System.Windows.Forms.Label lblUp;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDown;
         private System.Windows.Forms.GroupBox panel3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
