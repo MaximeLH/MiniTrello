@@ -50,8 +50,8 @@ namespace MiniTrello
             c.txtTitreListe.Text = txtTitreListe.Text;
             flnListe.Controls.Add(c);
             PremiereConfig();
-            c.lblLeft.Click += delegate (object s, EventArgs ev) { lblLeft_Click(sender, e, c); };
-            c.lblRight.Click += delegate (object s, EventArgs ev) { lblRight_Click(sender, e, c); };
+            c.MoveLeft += delegate (object s, EventArgs ev) { C_MoveLeft(sender, e, c); };
+            c.MoveRight += delegate (object s, EventArgs ev) { C_MoveRight(sender, e, c); };
 
             c.SupprimeMoi += delegate (object s, EventArgs ev) { C_SupprimeMoi(sender, e, c); };
 
@@ -62,7 +62,7 @@ namespace MiniTrello
             flnListe.Controls.Remove(c);
         }
 
-        private void lblLeft_Click(object sender, EventArgs e, CtlListe c)
+        private void C_MoveLeft(object sender, EventArgs e, CtlListe c)
         {
             var alphaIndex = flnListe.Controls.IndexOf(c);
             Control control = null;
@@ -80,7 +80,7 @@ namespace MiniTrello
             }
         }
 
-        private void lblRight_Click(object sender, EventArgs e, CtlListe c)
+        private void C_MoveRight(object sender, EventArgs e, CtlListe c)
         {
             var alphaIndex = flnListe.Controls.IndexOf(c);
             Control control = null;

@@ -177,8 +177,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flnListe;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Label lblTitreTableau;
         private System.Windows.Forms.VScrollBar vScrollBar1;
@@ -189,5 +187,6 @@
         private System.Windows.Forms.TextBox txtTitreListe;
         private System.Windows.Forms.Button btnSuppListe;
         private System.Windows.Forms.Button btnEnregistrerListe;
+        internal System.Windows.Forms.FlowLayoutPanel flnListe;
     }
 }

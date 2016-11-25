@@ -27,8 +27,8 @@ namespace MiniTrello.View {
         private void InitializeComponent() {
             this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
-            this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
             this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
             this.btnAddCarte = new System.Windows.Forms.Button();
             this.lblRight = new System.Windows.Forms.Label();
             this.lblLeft = new System.Windows.Forms.Label();
@@ -70,10 +70,17 @@ namespace MiniTrello.View {
             this.flpCartes.Size = new System.Drawing.Size(0, 0);
             this.flpCartes.TabIndex = 4;
             // 
+            // txtBoxTitreCarte
+            // 
+            this.txtBoxTitreCarte.Location = new System.Drawing.Point(3, 35);
+            this.txtBoxTitreCarte.Name = "txtBoxTitreCarte";
+            this.txtBoxTitreCarte.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxTitreCarte.TabIndex = 5;
+            // 
             // btnAddCarte
             // 
             this.btnAddCarte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddCarte.Location = new System.Drawing.Point(3, 35);
+            this.btnAddCarte.Location = new System.Drawing.Point(3, 61);
             this.btnAddCarte.Name = "btnAddCarte";
             this.btnAddCarte.Size = new System.Drawing.Size(219, 23);
             this.btnAddCarte.TabIndex = 1;
@@ -90,6 +97,7 @@ namespace MiniTrello.View {
             this.lblRight.Size = new System.Drawing.Size(26, 16);
             this.lblRight.TabIndex = 17;
             this.lblRight.Text = "-->";
+            this.lblRight.Click += new System.EventHandler(this.lblRight_Click);
             // 
             // lblLeft
             // 
@@ -100,6 +108,7 @@ namespace MiniTrello.View {
             this.lblLeft.Size = new System.Drawing.Size(26, 16);
             this.lblLeft.TabIndex = 18;
             this.lblLeft.Text = "<--";
+            this.lblLeft.Click += new System.EventHandler(this.lblLeft_Click);
             // 
             // btnSuppListe
             // 

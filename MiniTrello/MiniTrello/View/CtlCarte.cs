@@ -40,5 +40,19 @@ namespace MiniTrello.View
             t.Tag = this.Tag;
             t.ShowDialog();
         }
+
+        public event EventHandler MoveUp;
+
+        private void lblUp_Click(object sender, EventArgs e)
+        {
+            MoveUp?.Invoke(this, null);
+        }
+
+        public event EventHandler MoveDown;
+
+        private void lblDown_Click(object sender, EventArgs e)
+        {
+            MoveDown?.Invoke(this, null);
+        }
     }
 }
