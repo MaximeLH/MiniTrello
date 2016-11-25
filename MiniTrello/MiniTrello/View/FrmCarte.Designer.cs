@@ -1,6 +1,6 @@
 ﻿namespace MiniTrello
 {
-    partial class Titre
+    partial class FrmCarte
     {
         /// <summary>
         /// Required designer variable.
@@ -131,7 +131,7 @@
             this.Controls.Add(this.LblTitre);
             this.Name = "Titre";
             this.Text = "FormulaireCarte";
-            this.Load += new System.EventHandler(this.FormulaireCarte_Load);
+            this.Load += new System.EventHandler(this.FrmCarte_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
