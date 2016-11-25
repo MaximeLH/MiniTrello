@@ -64,5 +64,16 @@ namespace MiniTrello
                 //carte.Description = TxtBoxDescription.Text;
                 //ctx.SaveChanges();
         }
+
+        private void BtnAddCommentaire_Click(object sender, EventArgs e)
+        {
+            Label l1 = new Label();
+            l1.BackColor = Color.BlueViolet;
+            l1.ForeColor = Color.White;
+            l1.AutoSize = true;
+            l1.Text = TxtBoxDescription.Text;
+            FlnCommentaire.Controls.Add(l1);
+            TxtBoxDescription.Text = "";
+        }
     }
 }
