@@ -179,6 +179,7 @@
 
         #endregion
 
+        private System.Windows.Forms.FlowLayoutPanel flnListe;
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Label lblTitreTableau;
         private System.Windows.Forms.VScrollBar vScrollBar1;

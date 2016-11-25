@@ -132,13 +132,7 @@
     <EmbeddedResource Include="View\CtlChecklistElement.resx">
       <DependentUpon>CtlChecklistElement.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="View\FrmTestMoveCarte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FrmTestMoveCarte.Designer.cs">
-      <DependentUpon>FrmTestMoveCarte.cs</DependentUpon>
-    </Compile>
-	<EmbeddedResource Include="View\FrmCarte.resx">
+    <EmbeddedResource Include="View\FrmCarte.resx">
       <DependentUpon>FrmCarte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -163,9 +157,6 @@
       <DependentUpon>FrmTest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EmbeddedResource Include="View\FrmTestMoveCarte.resx">
-      <DependentUpon>FrmTestMoveCarte.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
