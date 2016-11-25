@@ -35,6 +35,7 @@
             this.FlowLayoutPnlCheckLists = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnAjouter = new System.Windows.Forms.Button();
             this.BtnSupprimer = new System.Windows.Forms.Button();
+            this.btnEditDescription = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblTitre
@@ -127,12 +128,23 @@
             this.BtnSupprimer.UseVisualStyleBackColor = true;
             this.BtnSupprimer.Click += new System.EventHandler(this.BtnSupprimer_Click);
             // 
+            // btnEditDescription
+            // 
+            this.btnEditDescription.Location = new System.Drawing.Point(25, 138);
+            this.btnEditDescription.Name = "btnEditDescription";
+            this.btnEditDescription.Size = new System.Drawing.Size(137, 23);
+            this.btnEditDescription.TabIndex = 7;
+            this.btnEditDescription.Text = "Modifier la description";
+            this.btnEditDescription.UseVisualStyleBackColor = true;
+            this.btnEditDescription.Click += new System.EventHandler(this.btnEditDescription_Click);
+            // 
             // FrmCarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(764, 495);
+            this.Controls.Add(this.btnEditDescription);
             this.Controls.Add(this.BtnSupprimer);
             this.Controls.Add(this.BtnAjouter);
             this.Controls.Add(this.FlowLayoutPnlCheckLists);
@@ -157,5 +169,6 @@
         private System.Windows.Forms.Label LblCheckList;
         private System.Windows.Forms.Button BtnAjouter;
         private System.Windows.Forms.Button BtnSupprimer;
+        private System.Windows.Forms.Button btnEditDescription;
     }
 }

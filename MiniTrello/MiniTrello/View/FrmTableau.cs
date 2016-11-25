@@ -23,6 +23,7 @@ namespace MiniTrello
             InitializeComponent();
             ctx = new MinitrelloDB();
             PremiereConfig();
+            Init();
         }
 
         public void btnAjoutListe_Click(object sender, EventArgs e)
@@ -168,6 +169,21 @@ namespace MiniTrello
 
             ctx.SaveChanges();
 
+        }
+
+        public void Init()
+        {
+            using (var ctx = new MinitrelloDB())
+            {
+                foreach (var item in ctx.Listes.Include("Cartes"))
+                {
+                    CtlListe ctlliste = new CtlListe();
+                    ctlliste.Tag = item;
+                    ctlliste.InitCartes();
+                    ctlliste.txtTitreListe.Text = item.Titre;
+                    flnListe.Controls.Add(ctlliste);
+                }
+            }
         }
     }
 }

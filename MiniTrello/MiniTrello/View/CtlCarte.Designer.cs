@@ -44,11 +44,10 @@ namespace MiniTrello.View
             // lblTitreCarte
             // 
             this.lblTitreCarte.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblTitreCarte.Location = new System.Drawing.Point(0, 37);
+            this.lblTitreCarte.Location = new System.Drawing.Point(0, 35);
             this.lblTitreCarte.Name = "lblTitreCarte";
-            this.lblTitreCarte.Size = new System.Drawing.Size(176, 22);
+            this.lblTitreCarte.Size = new System.Drawing.Size(174, 22);
             this.lblTitreCarte.TabIndex = 0;
-            this.lblTitreCarte.Text = "" ;
             this.lblTitreCarte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitreCarte.Click += new System.EventHandler(this.lblTitreCarte_Click);
             this.lblTitreCarte.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CtlCarte_MouseClick);
@@ -125,12 +124,13 @@ namespace MiniTrello.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Fuchsia;
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.lblTitreCarte);
             this.Name = "CtlCarte";
-            this.Size = new System.Drawing.Size(176, 59);
+            this.Size = new System.Drawing.Size(174, 57);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);

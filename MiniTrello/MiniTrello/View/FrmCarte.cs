@@ -21,14 +21,14 @@ namespace MiniTrello
             InitializeComponent();
             LblTitre.Name = "";
             LblSousTitre.Name = "Se trouve dans: " + "";
-            
+
         }
 
         private void FrmCarte_Load(object sender, EventArgs e)
         {
             Carte carte = (Carte)this.Tag;
             LblTitre.Text = carte.Titre;
-            TxtBoxDescription.Text= carte.Description ;
+            TxtBoxDescription.Text = carte.Description;
 
         }
 
@@ -43,7 +43,7 @@ namespace MiniTrello
 
         private void C1_Selected(object sender, EventArgs e)
         {
-            ctlSelected = (CtlCheckList) sender;
+            ctlSelected = (CtlCheckList)sender;
         }
 
         private void BtnSupprimer_Click(object sender, EventArgs e)
@@ -53,16 +53,32 @@ namespace MiniTrello
 
         private void LblTitre_TextChanged(object sender, EventArgs e)
         {
-                //Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
-                //c2.Titre = LblTitre.Text;
-                //ctx.SaveChanges();
+            //Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
+            //c2.Titre = LblTitre.Text;
+            //ctx.SaveChanges();
         }
 
         private void TxtBoxDescription_TextChanged(object sender, EventArgs e)
         {
-                //Carte carte = (Carte)this.Tag;
-                //carte.Description = TxtBoxDescription.Text;
-                //ctx.SaveChanges();
+            //Carte carte = (Carte)this.Tag;
+            //carte.Description = TxtBoxDescription.Text;
+            //ctx.SaveChanges();
+        }
+
+        private void btnEditDescription_Click(object sender, EventArgs e)
+        {
+                Init();
+         }
+
+        public void Init()
+        {
+            using (var ctx = new Data.MinitrelloDB())
+            {
+                Carte c = (Carte)this.Tag;
+                Carte c2 = ctx.Cartes.Single(x => x.Id == c.Id);
+                c2.Description = TxtBoxDescription.Text;
+                ctx.SaveChanges();
+            }
         }
     }
 }
