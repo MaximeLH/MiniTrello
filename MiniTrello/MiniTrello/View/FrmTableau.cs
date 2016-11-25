@@ -59,7 +59,8 @@ namespace MiniTrello
             CtrlListe c = new CtrlListe();
             c.txtTitreListe.Text = txtAjout.Text;
             flnListe.Controls.Add(c);
-            c.lblLeft.Click += new EventHandler(lblLeft_Click);
+            c.lblLeft.Click += (sender, e) => { lblLeft_Click(sender, e, c); };
+                //new EventHandler(lblLeft_Click(this, e, c));
         }
 
         private void txtAjout_TextChanged(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace MiniTrello
 
         }
 
-        private void lblLeft_Click(object sender, EventArgs e)
+        private void lblLeft_Click(object sender, EventArgs e, CtrlListe c)
         {
             var alphaIndex = flnListe.Controls.IndexOf(c);
             Control control = null;
