@@ -1,9 +1,7 @@
 ﻿using System.Windows.Forms;
 
-namespace MiniTrello.View
-{
-    partial class CtlListe
-    {
+namespace MiniTrello.View {
+    partial class CtlListe {
         /// <summary> 
         /// Variable nécessaire au concepteur.
         /// </summary>
@@ -13,10 +11,8 @@ namespace MiniTrello.View
         /// Nettoyage des ressources utilisées.
         /// </summary>
         /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -28,8 +24,7 @@ namespace MiniTrello.View
         /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
         /// le contenu de cette méthode avec l'éditeur de code.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.txtBoxTitreCarte = new System.Windows.Forms.TextBox();
@@ -48,6 +43,7 @@ namespace MiniTrello.View
             this.flnCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flnCarte.Controls.Add(this.txtTitreListe);
             this.flnCarte.Controls.Add(this.flpCartes);
+            this.flnCarte.Controls.Add(this.txtBoxTitreCarte);
             this.flnCarte.Controls.Add(this.btnAddCarte);
             this.flnCarte.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flnCarte.Location = new System.Drawing.Point(3, 23);
@@ -132,6 +128,7 @@ namespace MiniTrello.View
             this.flnCarte.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
