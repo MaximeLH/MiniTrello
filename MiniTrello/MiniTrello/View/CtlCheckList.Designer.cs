@@ -38,7 +38,7 @@
             // 
             // FlowLayoutPnlCheckList
             // 
-            this.FlowLayoutPnlCheckList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.FlowLayoutPnlCheckList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.FlowLayoutPnlCheckList.Controls.Add(this.FlowLayoutPnlCheckListElt);
             this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblAddElement);
             this.FlowLayoutPnlCheckList.Controls.Add(this.LinkLblSupprElt);
@@ -65,7 +65,7 @@
             this.LinkLblAddElement.AutoSize = true;
             this.LinkLblAddElement.BackColor = System.Drawing.Color.Transparent;
             this.LinkLblAddElement.Font = new System.Drawing.Font("OpenSymbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LinkLblAddElement.LinkColor = System.Drawing.Color.White;
+            this.LinkLblAddElement.LinkColor = System.Drawing.Color.Black;
             this.LinkLblAddElement.Location = new System.Drawing.Point(3, 75);
             this.LinkLblAddElement.Name = "LinkLblAddElement";
             this.LinkLblAddElement.Size = new System.Drawing.Size(133, 16);

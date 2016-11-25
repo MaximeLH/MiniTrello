@@ -34,7 +34,7 @@ namespace MiniTrello.View
 
         private void C2_Selected(object sender, EventArgs e)
         {
-            ctlElementSelected = (CtlChecklistElement)sender;
+            ctlElementSelected = (CtlChecklistElement) sender;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

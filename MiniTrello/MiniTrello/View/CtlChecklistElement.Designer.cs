@@ -40,6 +40,7 @@
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBox1
             // 
@@ -48,7 +49,6 @@
             this.textBox1.Size = new System.Drawing.Size(386, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // CtlChecklistElement
             // 
