@@ -50,6 +50,44 @@ namespace MiniTrello
             c.txtTitreListe.Text = txtTitreListe.Text;
             flnListe.Controls.Add(c);
             PremiereConfig();
+            c.lblLeft.Click += delegate (object s, EventArgs ev) { lblLeft_Click(sender, e, c); };
+            c.lblRight.Click += delegate (object s, EventArgs ev) { lblRight_Click(sender, e, c); };
+        }
+
+        private void lblLeft_Click(object sender, EventArgs e, CtlListe c)
+        {
+            var alphaIndex = flnListe.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flnListe.Controls)
+            {
+                if (flnListe.Controls.IndexOf(ctrl) == alphaIndex - 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flnListe.Controls.SetChildIndex(c, alphaIndex - 1);
+                flnListe.Controls.SetChildIndex(control, alphaIndex);
+            }
+        }
+
+        private void lblRight_Click(object sender, EventArgs e, CtlListe c)
+        {
+            var alphaIndex = flnListe.Controls.IndexOf(c);
+            Control control = null;
+            foreach (Control ctrl in flnListe.Controls)
+            {
+                if (flnListe.Controls.IndexOf(ctrl) == alphaIndex + 1)
+                { control = ctrl; break; }
+            }
+            if (control == null)
+            { }
+            else
+            {
+                flnListe.Controls.SetChildIndex(c, alphaIndex + 1);
+                flnListe.Controls.SetChildIndex(control, alphaIndex);
+            }
         }
 
         private void btnSuppListe_Click(object sender, EventArgs e)
@@ -59,7 +97,7 @@ namespace MiniTrello
 
         private void BtnResetDB_Click(object sender, EventArgs e)
         {
-            
+
             foreach (var item in ctx.Tableaux)
             {
                 ctx.Tableaux.Remove(item);
