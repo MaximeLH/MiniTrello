@@ -28,12 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblRight = new System.Windows.Forms.Label();
+            this.lblLeft = new System.Windows.Forms.Label();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
             this.btnAddCarte = new System.Windows.Forms.Button();
             this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
             this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
             this.flnCarte.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // flnCarte
+            // 
+            this.flnCarte.AutoSize = true;
+            this.flnCarte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flnCarte.Controls.Add(this.txtTitreListe);
+            this.flnCarte.Controls.Add(this.flpCartes);
+            this.flnCarte.Controls.Add(this.btnAddCarte);
+            this.flnCarte.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flnCarte.Location = new System.Drawing.Point(3, 19);
+            this.flnCarte.MaximumSize = new System.Drawing.Size(227, 500);
+            this.flnCarte.Name = "flnCarte";
+            this.flnCarte.Size = new System.Drawing.Size(227, 99);
+            this.flnCarte.TabIndex = 4;
+            // 
+            // lblRight
+            // 
+            this.lblRight.AutoSize = true;
+            this.lblRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRight.Location = new System.Drawing.Point(32, 0);
+            this.lblRight.Name = "lblRight";
+            this.lblRight.Size = new System.Drawing.Size(26, 16);
+            this.lblRight.TabIndex = 17;
+            this.lblRight.Text = "-->";
+            // 
+            // lblLeft
+            // 
+            this.lblLeft.AutoSize = true;
+            this.lblLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLeft.Location = new System.Drawing.Point(0, 0);
+            this.lblLeft.Name = "lblLeft";
+            this.lblLeft.Size = new System.Drawing.Size(26, 16);
+            this.lblLeft.TabIndex = 18;
+            this.lblLeft.Text = "<--";
             // 
             // txtTitreListe
             // 
@@ -83,9 +120,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.lblRight);
+            this.Controls.Add(this.lblLeft);
             this.Controls.Add(this.flnCarte);
             this.Name = "CtlListe";
-            this.Size = new System.Drawing.Size(251, 113);
+            this.Size = new System.Drawing.Size(251, 129);
             this.flnCarte.ResumeLayout(false);
             this.flnCarte.PerformLayout();
             this.ResumeLayout(false);
@@ -98,5 +137,7 @@
         internal System.Windows.Forms.TextBox txtTitreListe;
         public System.Windows.Forms.FlowLayoutPanel flpCartes;
         private System.Windows.Forms.FlowLayoutPanel flnCarte;
+        internal System.Windows.Forms.Label lblLeft;
+        internal System.Windows.Forms.Label lblRight;
     }
 }
