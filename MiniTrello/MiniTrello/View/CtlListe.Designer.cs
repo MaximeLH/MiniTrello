@@ -28,12 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
             this.txtTitreListe = new System.Windows.Forms.TextBox();
-            this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddCarte = new System.Windows.Forms.Button();
+            this.flpCartes = new System.Windows.Forms.FlowLayoutPanel();
+            this.flnCarte = new System.Windows.Forms.FlowLayoutPanel();
             this.flnCarte.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txtTitreListe
+            // 
+            this.txtTitreListe.Location = new System.Drawing.Point(3, 3);
+            this.txtTitreListe.Name = "txtTitreListe";
+            this.txtTitreListe.Size = new System.Drawing.Size(219, 20);
+            this.txtTitreListe.TabIndex = 3;
+            // 
+            // btnAddCarte
+            // 
+            this.btnAddCarte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAddCarte.Location = new System.Drawing.Point(3, 35);
+            this.btnAddCarte.Name = "btnAddCarte";
+            this.btnAddCarte.Size = new System.Drawing.Size(219, 23);
+            this.btnAddCarte.TabIndex = 1;
+            this.btnAddCarte.Text = "Ajouter une carte";
+            this.btnAddCarte.UseVisualStyleBackColor = true;
+            this.btnAddCarte.Click += new System.EventHandler(this.btnAddCarte_Click);
+            // 
+            // flpCartes
+            // 
+            this.flpCartes.AccessibleName = "flpCartes";
+            this.flpCartes.AutoScroll = true;
+            this.flpCartes.AutoSize = true;
+            this.flpCartes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpCartes.Location = new System.Drawing.Point(3, 29);
+            this.flpCartes.Name = "flpCartes";
+            this.flpCartes.Size = new System.Drawing.Size(0, 0);
+            this.flpCartes.TabIndex = 4;
             // 
             // flnCarte
             // 
@@ -49,42 +78,13 @@
             this.flnCarte.Size = new System.Drawing.Size(227, 89);
             this.flnCarte.TabIndex = 4;
             // 
-            // txtTitreListe
-            // 
-            this.txtTitreListe.Location = new System.Drawing.Point(3, 3);
-            this.txtTitreListe.Name = "txtTitreListe";
-            this.txtTitreListe.Size = new System.Drawing.Size(219, 20);
-            this.txtTitreListe.TabIndex = 3;
-            // 
-            // flpCartes
-            // 
-            this.flpCartes.AccessibleName = "flpCartes";
-            this.flpCartes.AutoScroll = true;
-            this.flpCartes.AutoSize = true;
-            this.flpCartes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpCartes.Location = new System.Drawing.Point(3, 29);
-            this.flpCartes.Name = "flpCartes";
-            this.flpCartes.Size = new System.Drawing.Size(0, 0);
-            this.flpCartes.TabIndex = 4;
-            // 
-            // btnAddCarte
-            // 
-            this.btnAddCarte.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAddCarte.Location = new System.Drawing.Point(4, 35);
-            this.btnAddCarte.Name = "btnAddCarte";
-            this.btnAddCarte.Size = new System.Drawing.Size(216, 23);
-            this.btnAddCarte.TabIndex = 1;
-            this.btnAddCarte.Text = "Ajouter une carte";
-            this.btnAddCarte.UseVisualStyleBackColor = true;
-            this.btnAddCarte.Click += new System.EventHandler(this.btnAddCarte_Click);
-            // 
-            // CtrlListe
+            // CtlListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.flnCarte);
-            this.Name = "CtrlListe";
+            this.Name = "CtlListe";
             this.Size = new System.Drawing.Size(251, 113);
             this.flnCarte.ResumeLayout(false);
             this.flnCarte.PerformLayout();
@@ -94,10 +94,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flnCarte;
         private System.Windows.Forms.Button btnAddCarte;
         internal System.Windows.Forms.TextBox txtTitreListe;
         public System.Windows.Forms.FlowLayoutPanel flpCartes;
+        private System.Windows.Forms.FlowLayoutPanel flnCarte;
     }
 }

@@ -23,5 +23,7 @@ namespace MiniTrello.View
             flpCartes.Controls.Add(ctCarte);         
 
         }
+
+     
     }
 }
